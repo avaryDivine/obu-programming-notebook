@@ -1,6 +1,6 @@
 [Maven](computer-science-i/README.md)
 
-
+# HW-003-Maven
 Describe the purpose of use of maven
 Document the steps for installing maven on your computer (you can include links)
 Demonstrate creation of a project
