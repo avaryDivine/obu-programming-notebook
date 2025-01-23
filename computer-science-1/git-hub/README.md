@@ -1,4 +1,6 @@
 [GitHub / git](computer-science-i/README.md)
+
+OBU Programming Notebook: C:\Users\avaka
 # HW-002-git
 https://www.w3schools.com/git/git_intro.asp?remote=github
 
