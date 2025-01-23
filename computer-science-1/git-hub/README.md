@@ -1,6 +1,15 @@
 [GitHub / git](computer-science-i/README.md)
 
 OBU Programming Notebook: C:\Users\avaka
+
+# Startup
+1 - open command prompt or terminal
+2 - cd to obu-programming-notebook
+3 - pull from GitHub
+```
+git pull
+```
+
 # HW-002-git
 https://www.w3schools.com/git/git_intro.asp?remote=github
 
