@@ -34,3 +34,28 @@ mvn archetype:generate "-DgroupId=com.mycompany.app" "-DartifactId=my-app -Darch
    mvn test
    
 Demonstrate running a project from the command line
+
+
+## Testing
+In AppTest.java write a test for each of your methods. 
+
+``
+
+@Test
+
+    public void test_002() {
+    
+        C1 c1 = new C1(1, 2,3);
+        
+        assertEquals(6, c1.add3());
+        
+    }
+  ``
+  
+  name the test (test_002) 
+  
+  create a variable that is of your class C1, give numbers to the constructor
+  
+  assertEquals(expected value, what method)
+  
+  once you have your tests, in your terminal type mvn clean and compile, then mvn test, make sure everything run smooth and is green.
