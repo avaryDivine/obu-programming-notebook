@@ -9,3 +9,20 @@ System.out.print("Hello World!");
 Putting ln at the end as in System.out.prntln("Hello World!") will create a newline.
 6. A syntax error is an error that will appear if you violate the rules of the programming language such as how symbols can be used or combined. One big example is forgetting a semi-colon. A syntax error is also known as a compile-time error because it is detected by the compiler. Another kind of error is a logic error. With a logic error or a bug, the program will compile but may not run correctly or give the desired result. An example of this is using the wrong variable or operation. A warning is when the compiler can accurately compile the program but suggests a possible logic error.
 7. An IDE is a software that combines a text editor and compiler it can also contain other tools. Instead of having to install different software to write, compile, test and debug code, a programmer can benefit from an IDE which combines a lot of the software needed to accomplish those tasks.
+
+
+# Steps for creating a class
+1. create file, same name as class.java
+2. define the instance variables, top of calss, be sure to give their type
+3. Create constructor(s)
+   ```
+   public ClassName() {
+     
+   }
+   ```
+   Rule: public followed by name of class and parameters
+4. Implement methods
+   a - define the "signiture"
+   assume public
+5. finish method implementation
+6. write test cases
