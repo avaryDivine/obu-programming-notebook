@@ -25,4 +25,6 @@ Putting ln at the end as in System.out.prntln("Hello World!") will create a newl
    a - define the "signiture"
    assume public
 5. finish method implementation
-6. write test cases
+6. run ```mvn clean compile```
+7. write test cases
+8. run ```mvn test```
