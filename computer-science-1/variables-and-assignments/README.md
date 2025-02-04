@@ -45,3 +45,40 @@
   4. + -
   5. left-to-right
 kind of like PEMDAS
+
+## 2.7 - Floating Point Numbers (double)
+1. Describe and give an example of a floating point number and a literal
+
+   float: 458.99         literal: 35.0
+2. Describe how to choose between a int or double variable type
+
+   integers are often used for countable values for example number of cookies, number of days,
+   whereas double variable types are used for measurments (98.6 degrees) or fractions of countable values (average number of people in a family)
+4. Demonstrate (give an example) of Java code for formatting floating point output
+
+   
+5. Explain the answer to division by 0.0 and 0.0 divided by 0.0
+
+   0.0 divided by a float results in zero, a float divided by 0.0 results in either infinity or -infinity, 0.0 divided by 0.0 results in "not a number"
+6. Demonstrate (give an example) of a floating-point literal in scientific notation
+ 
+   346785.0 in scientific notation is 3.46785E5 
+7. Demonstrate (give an example) Java declaration of a floating-point number, assignment, etc.
+
+   
+## 2.9 - Constant Variables
+1. Demonstrate (give an example) declaration of a constant-valued variable
+```
+   final double SECONDS_PER_DAY = 86400.0;
+```
+2. Describe the meaning and use of a constant variable
+
+   a constant variable or a final variable is a variable that cannot be changed, guarantee a variable always has the same value.
+
+## 2.10 - Using Math Methods
+1. Explain the purpose and use of the math library / class
+
+   contains math symbols and functions that you can call and use in your program
+2. Describe the purpose and use (give examples) of a method
+
+   perform operations such as square root (Math.sqrt(x)), absolute value (Math.abs(x))
