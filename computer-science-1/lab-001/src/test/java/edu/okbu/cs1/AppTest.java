@@ -70,4 +70,58 @@ public class AppTest
         LAB2_25 lab2_25 = new LAB2_25(100, 2);
         assertEquals(12, lab2_25.do3x());
     }
+
+    @Test
+    public void test_011() {
+        LAB2_27 l = new LAB2_27(1.0, 2.0, 3.0);
+        assertEquals(l.xpowz(), (double) 1.0, (double) 0.0001);
+    }
+
+    @Test
+    public void test_012() {
+        LAB2_27 l = new LAB2_27(1.0, 2.0, 3.0);
+        assertEquals(l.xpowypowz(), (double) 1.0, (double) 0.0001);
+    }
+
+    @Test
+    public void test_013() {
+        LAB2_27 l = new LAB2_27(1.0, 2.0, 3.0);
+        assertEquals(l.absy(), (double) 2.0, (double) 0.0001);
+    }
+
+    @Test
+    public void test_014() {
+        LAB2_27 l = new LAB2_27(1.0, 2.0, 3.0);
+        assertEquals(l.sqrtof(), (double) 2.8284, (double) 0.0001);
+    }
+
+    @Test
+    public void sqftTest() {
+        Carpet c = new Carpet(1.00, 15, 10);
+        assertEquals(c.computeSquareFootage(), 150, (double) 0.01);
+    }
+
+    @Test
+    public void costTest() {
+        Carpet c = new Carpet(1.00, 15, 10);
+        assertEquals(c.computeCarpetCost(), 180, (double) 0.01);
+    }
+
+    @Test
+    public void laborTest() {
+        Carpet c = new Carpet(1.00, 15, 10);
+        assertEquals(c.computeLabor(), 112.5, (double) 0.01);
+    }
+
+    @Test
+    public void taxTest() {
+        Carpet c = new Carpet(1.00, 15, 10);
+        assertEquals(c.computeTax(), 20.47, (double) 0.01);
+    }
+
+    @Test
+    public void totalTest() {
+        Carpet c = new Carpet(1.00, 15, 10);
+        assertEquals(c.totalCost(), 312.97, (double) 0.01);
+    }
 }
