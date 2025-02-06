@@ -1,6 +1,6 @@
 [Variables / Assignments](variables-and-assignments/README.md)
 
-# HW-005
+# HW - 005
 
 ## 2.1 - Variables and Assignments (general)
 1. Describe and give an example of a variable
@@ -46,6 +46,7 @@
   5. left-to-right
 kind of like PEMDAS
 
+# HW - 006
 ## 2.7 - Floating Point Numbers (double)
 1. Describe and give an example of a floating point number and a literal
 
@@ -82,3 +83,41 @@ kind of like PEMDAS
 2. Describe the purpose and use (give examples) of a method
 
    perform operations such as square root (Math.sqrt(x)), absolute value (Math.abs(x))
+
+# HW - 007
+## 2.11 - Integer Division and Modulo
+1. Describe integer division
+
+   division that does not generate a fraction, so then 10/4 = 2 instead of 2.5 for example
+2. Describe integer modulo
+
+   determines the remainder of the division of two integers, so then 43 % 10 = 3 for example.
+3. Demonstrate the use of Java integer division and modulo (no answer needed in the homework)
+
+## 2.12 - Type Conversions
+1. Describe the need for type conversions
+
+   allows you to change from one data type to another, 
+2. Describe implicit type conversion
+
+   automatic, common conversions carried out by the compiler. int and double types
+3. Demonstrate the use of type casting in Java (no answer is needed in the homework)
+
+   
+## 2.14 - Characters
+1. Demonstrate the use of character variables (no answer is needed in the homework)
+2. Discuss the representation of characters as numbers (include discussion of the ASCII standard)
+
+   most characters are coded and stored as numbers, the ASCII is a standard for encoding numbers, 
+3. Describe escape sequences and their purpose
+
+   two-character sequence that represents a character such as \n for newline or \t for tab
+   
+## 2.15 - Strings
+1. Describe the Java string data type
+
+   sequence of characters, double quotes, 
+2. Demonstrate the use of String variables in Java (no need to answer this in homework)
+3. Describe the difference between next() and nextLine() in the Scanner class
+
+   next() reads until next whitespace, nextLine() reads all characters on that one line.
