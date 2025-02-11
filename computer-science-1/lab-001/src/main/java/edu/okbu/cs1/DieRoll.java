@@ -5,6 +5,7 @@ import java.util.Random;
 public class DieRoll {
     int minPip;
     int maxPip;
+    Random randGen = new Random();
 
     public DieRoll(int min, int max) {
         minPip = min;
@@ -12,6 +13,6 @@ public class DieRoll {
     }
 
     public int roll() {
-        return randGen.nextInt(7+ 1) + 1;
+        return randGen.nextInt(minPip, maxPip);
     }
 }

@@ -124,4 +124,47 @@ public class AppTest
         Carpet c = new Carpet(1.00, 15, 10);
         assertEquals(c.totalCost(), 312.97, (double) 0.01);
     }
+
+    @Test
+    public void afterSixTest() {
+        CaffeineLevels a = new CaffeineLevels(200);
+        assertEquals(a.afterSixHours(), 100, (double) 0.01);
+    }
+
+    @Test
+    public void afterTwelveTest() {
+        CaffeineLevels a = new CaffeineLevels(200);
+        assertEquals(a.afterTwelveHours(), 50, (double) 0.01);
+    }
+
+    @Test
+    public void afterTwentyFourTest() {
+        CaffeineLevels a = new CaffeineLevels(200);
+        assertEquals(a.afterTwentyFour(), 12.5, (double) 0.01);
+    }
+
+    @Test
+    public void perimeterTest() {
+        Triangle t = new Triangle();
+        t.setSide1Lengths(2);
+        t.setSide2Lengths(5);
+        t.setSide3Lengths(3);
+        assertEquals(t.computePerimeter(), 10, (double) 0.01);
+    }
+
+    @Test
+    public void areaTest() {
+        Triangle t = new Triangle();
+        t.setSide1Lengths(2);
+        t.setSide2Lengths(5);
+        t.setSide3Lengths(3);
+        assertEquals(t.computeArea(), 52.91, (double) 0.01);
+    }
+
+    @Test
+    public void rollTest() {
+        DieRoll d = new DieRoll(1,6);
+        assertTrue(d.roll() >= 1 && d.roll() <= 6);
+    }
+
 }
