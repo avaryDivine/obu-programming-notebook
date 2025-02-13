@@ -26,8 +26,4 @@ public class HotelReservation {
     public void setHotelRate(double hotelRate) {
         this.hotelRate = hotelRate;
     }
-
-    
-
-
 }
