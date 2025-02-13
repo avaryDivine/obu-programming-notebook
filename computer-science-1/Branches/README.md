@@ -33,7 +33,9 @@ else {
 
 4. Describe and give example Java code for the correct way to compare strings for equality
 
-   
+   instead of usig == you would use something like equals() or comparesTo()
 
 ## 3.4 Detecting Ranges with Branches
 1. Describe and give example Java code to detect a range (using logical operators and gaps)
+
+   
