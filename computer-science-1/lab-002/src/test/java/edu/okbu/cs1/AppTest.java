@@ -88,6 +88,55 @@ public class AppTest
         assertEquals(m.getTicketPrice(), 14);
     }
 
+    @Test
+    public void test_013() {
+        Toll t =  new Toll(5,0,0,2);
+        assertEquals(t.getTollAmount(), 1.55, 0.01);
+    }
+
+    @Test
+    public void test_014() {
+        Toll t =  new Toll(16,0,0,1);
+        assertEquals(t.getTollAmount(), 2.35, 0.01);
+    }
+
+    @Test
+    public void test_015() {
+        Toll t =  new Toll(13,0,1,2);
+        assertEquals(t.getTollAmount(), 3.45, 0.01);
+    }
+
+    @Test
+    public void test_016() {
+        Toll t =  new Toll(20,0,1,1);
+        assertEquals(t.getTollAmount(), 3.05, 0.01);
+    }
+
+    @Test
+    public void test_017() {
+        Toll t =  new Toll(9,0,0,7);
+        assertEquals(t.getTollAmount(), 2.32, 0.01);
+    }
+
+    @Test
+    public void test_018() {
+        Toll t =  new Toll(15,0,1,5);
+        assertEquals(t.getTollAmount(), 0.0, 0.01);
+    }
+
+    @Test
+    public void test_019() {
+        Toll t =  new Toll(5,0,0,6);
+        assertEquals(t.getTollAmount(), 0.0, 0.001);
+    }
+
+
+
+
+
+
+
+
 
 
 }
