@@ -7,9 +7,8 @@ public class Toll {
     int numPeople;
     double tollAmount;
 
-    public Toll(int hour, int minute, int day, int people) {
+    public Toll(int hour, int day, int people) {
         timeHour = hour;
-        timeMinute = minute;
         typeDay = day;
         numPeople = people;
     }

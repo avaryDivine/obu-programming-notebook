@@ -90,46 +90,107 @@ public class AppTest
 
     @Test
     public void test_013() {
-        Toll t =  new Toll(5,0,0,2);
+        Toll t =  new Toll(5,0,2);
         assertEquals(t.getTollAmount(), 1.55, 0.01);
     }
 
     @Test
     public void test_014() {
-        Toll t =  new Toll(16,0,0,1);
+        Toll t =  new Toll(16,0,1);
         assertEquals(t.getTollAmount(), 2.35, 0.01);
     }
 
     @Test
     public void test_015() {
-        Toll t =  new Toll(13,0,1,2);
+        Toll t =  new Toll(13,1,2);
         assertEquals(t.getTollAmount(), 3.45, 0.01);
     }
 
     @Test
     public void test_016() {
-        Toll t =  new Toll(20,0,1,1);
+        Toll t =  new Toll(20,1,1);
         assertEquals(t.getTollAmount(), 3.05, 0.01);
     }
 
     @Test
     public void test_017() {
-        Toll t =  new Toll(9,0,0,7);
+        Toll t =  new Toll(9,0,7);
         assertEquals(t.getTollAmount(), 2.32, 0.01);
     }
 
     @Test
     public void test_018() {
-        Toll t =  new Toll(15,0,1,5);
+        Toll t =  new Toll(15,1,5);
         assertEquals(t.getTollAmount(), 0.0, 0.01);
     }
 
     @Test
     public void test_019() {
-        Toll t =  new Toll(5,0,0,6);
+        Toll t =  new Toll(5,0,6);
         assertEquals(t.getTollAmount(), 0.0, 0.001);
     }
 
+    @Test
+    public void test_020() {
+        InterstateHighway i = new InterstateHighway(90);
+        assertEquals(i.isAuxiliary(), false);
+    }
+
+    @Test
+    public void test_021() {
+        InterstateHighway i = new InterstateHighway(290);
+        assertEquals(i.isAuxiliary(), true);
+    }
+
+    @Test
+    public void test_022() {
+        InterstateHighway i = new InterstateHighway(90);
+        assertEquals(i.direction(), "east/west");
+    }
+
+    @Test
+    public void test_023() {
+        InterstateHighway i = new InterstateHighway(95);
+        assertEquals(i.direction(), "north/south");
+    }
+
+    @Test
+    public void test_024() {
+        InterstateHighway i = new InterstateHighway(290);
+        assertEquals(i.primaryNumber(), 90);
+    }
+
+    @Test
+    public void test_025() {
+        InterstateHighway i = new InterstateHighway(324);
+        assertEquals(i.primaryNumber(), 24);
+    }
+
+    @Test
+    public void test_026() {
+        InterstateHighway i = new InterstateHighway(85);
+        assertEquals(i.primaryNumber(), 85);
+    }
+
+    @Test
+    public void test_027() {
+        ExactChange e = new ExactChange(147);
+        assertEquals(e.getNumDollars(), 1);
+        assertEquals(e.getNumQuarters(), 1);
+        assertEquals(e.getNumDimes(), 2);
+        assertEquals(e.getNumNickels(), 0);
+        assertEquals(e.getNumPennies(), 2);
+    }
+
+    @Test
+    public void test_028() {
+        ExactChange e = new ExactChange(46);
+        assertEquals(e.getNumDollars(), 0);
+        assertEquals(e.getNumQuarters(), 1);
+        assertEquals(e.getNumDimes(), 2);
+        assertEquals(e.getNumNickels(), 0);
+        assertEquals(e.getNumPennies(), 1);
+    }
 
 
 
