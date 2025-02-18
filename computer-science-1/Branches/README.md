@@ -39,3 +39,30 @@ else {
 1. Describe and give example Java code to detect a range (using logical operators and gaps)
 
    
+
+
+
+
+# 3.11 Switch Statements
+1. Describe the purpose of a switch statement
+
+   
+2. Provide an example use of a switch statement
+
+   
+# 3.12 Boolean Data Type
+1. Demonstrate (give an example) of a Java declaration of a Boolean variable and assignment and a Boolean literal and an expression
+
+   
+# 3.13 String Comparisons
+1. Demonstrate (give an example) of the correct way to do String comparisons in Java
+
+   
+# 3.14 String Access Operations
+1. Demonstrate Java code for accessing a character (including the last character) in a String
+
+   
+# 3.15 Character Operations
+1. Demonstrate Java code to determine if a character is a letter, digit or whitespace.
+
+   
