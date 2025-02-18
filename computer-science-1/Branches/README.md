@@ -43,13 +43,63 @@ else {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 3.11 Switch Statements
 1. Describe the purpose of a switch statement
 
-   
+   represent multi-branch behavior more clearly involves variable being compared to constant values
 2. Provide an example use of a switch statement
 
-   
+   ```
+   switch (numPeople) {
+     case 6:
+       ticketPrice = 1.00;
+       break;
+     case 14:
+       ticketPrice = 3.00;
+       break;
+     case 18:
+       ticketPrice = 5.00;
+       break;
+     default:
+       ticketPrice = 7.00;
+       break;
+   }
+   ```
 # 3.12 Boolean Data Type
 1. Demonstrate (give an example) of a Java declaration of a Boolean variable and assignment and a Boolean literal and an expression
 
