@@ -64,7 +64,7 @@ public class Season {
                     return "Invalid";
                 }
             }
-            else if ((month.equals("January") && (day <= 31)) || (month.equals("February") && (day <= 30))) {
+            else if ((month.equals("January") && (day <= 31)) || (month.equals("February") && (day <= 28))) {
                 return "Winter";
             }
             else {
