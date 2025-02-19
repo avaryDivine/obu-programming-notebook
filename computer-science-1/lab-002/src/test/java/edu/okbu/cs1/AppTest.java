@@ -192,6 +192,48 @@ public class AppTest
         assertEquals(e.getNumPennies(), 1);
     }
 
+    @Test
+    public void test_029() {
+        Season s = new Season("April", 11);
+        assertEquals(s.getSeasonString(), "Spring");
+    }
+
+    @Test
+    public void test_030() {
+        Season s = new Season("June", 25);
+        assertEquals(s.getSeasonString(), "Summer");
+    }
+
+    @Test
+    public void test_031() {
+        Season s = new Season("October", 2);
+        assertEquals(s.getSeasonString(), "Autumn");
+    }
+
+    @Test
+    public void test_032() {
+        Season s = new Season("Blue", 11);
+        assertEquals(s.getSeasonString(), "Invalid");
+    }
+
+    @Test
+    public void test_033() {
+        Season s = new Season("April", 0);
+        assertEquals(s.getSeasonString(), "Invalid");
+    }
+
+    @Test
+    public void test_034() {
+        Season s = new Season("September", 40);
+        assertEquals(s.getSeasonString(), "Invalid");
+    }
+
+    @Test
+    public void test_035() {
+        Season s = new Season("Green", 0);
+        assertEquals(s.getSeasonString(), "Invalid");
+    }
+
 
 
 
