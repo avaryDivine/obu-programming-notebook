@@ -102,17 +102,26 @@ else {
    ```
 # 3.12 Boolean Data Type
 1. Demonstrate (give an example) of a Java declaration of a Boolean variable and assignment and a Boolean literal and an expression
+```
+boolean isPink;
 
-   
+isPink = true;
+```
 # 3.13 String Comparisons
 1. Demonstrate (give an example) of the correct way to do String comparisons in Java
 
-   
+   str2.equals(str3); not ==
 # 3.14 String Access Operations
 1. Demonstrate Java code for accessing a character (including the last character) in a String
-
-   
+  ```
+   newWord = "Colorado";
+   System.out.print(newWord.charAt(5));
+  ```
+returns a
 # 3.15 Character Operations
 1. Demonstrate Java code to determine if a character is a letter, digit or whitespace.
 
+isDigit()
+isLetter()
+isWhitespace()
    
