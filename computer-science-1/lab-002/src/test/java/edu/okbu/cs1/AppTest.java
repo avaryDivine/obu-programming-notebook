@@ -234,12 +234,39 @@ public class AppTest
         assertEquals(s.getSeasonString(), "Invalid");
     }
 
+    @Test
+    public void test_036() {
+        Year y = new Year(1712);
+        y.setTheYear(1712);
+        assertEquals(y.getTheYear(), 1712);
+    }
 
+    @Test
+    public void test_037() {
+        Year y = new Year(1712);
+        y.setTheYear(1712);
+        assertEquals(y.isLeapYear(), true);
+    }
 
+    @Test
+    public void test_038() {
+        Year y = new Year(1913);
+        y.setTheYear(1913);
+        assertEquals(y.isLeapYear(), false);
+    }
 
+    @Test
+    public void test_039() {
+        Year y = new Year(1700);
+        y.setTheYear(1700);
+        assertEquals(y.isLeapYear(), false);
+    }
 
-
-
-
+    @Test
+    public void test_040() {
+        Year y = new Year(1600);
+        y.setTheYear(1600);
+        assertEquals(y.isLeapYear(), true);
+    }
 
 }
