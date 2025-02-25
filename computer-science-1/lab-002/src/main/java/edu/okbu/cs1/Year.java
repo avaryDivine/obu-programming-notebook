@@ -8,7 +8,7 @@ public class Year {
     }
 
     public boolean isLeapYear() {
-        if ((theYear % 100) == 00) {
+        if ((theYear % 100) == 0) {
             if ((theYear % 400) == 0) {
                 return true;
             }
