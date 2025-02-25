@@ -8,4 +8,5 @@ edu\okbu\cs1\Season.class
 edu\okbu\cs1\App.class
 edu\okbu\cs1\Toll.class
 edu\okbu\cs1\CableTVChannels.class
+edu\okbu\cs1\IncomeTaxForm.class
 edu\okbu\cs1\MovieTicketPrice.class

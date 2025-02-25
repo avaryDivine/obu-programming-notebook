@@ -269,4 +269,49 @@ public class AppTest
         assertEquals(y.isLeapYear(), true);
     }
 
+    @Test
+    public void test_041() {
+        IncomeTaxForm t = new IncomeTaxForm();
+        t.setWages(80000);
+        t.setInterest(0);
+        t.setUnemployment(500);
+        t.setStatus(2);
+        t.setWithheld(12000);
+        assertEquals(t.getAGI(), 80500);
+        assertEquals(t.getDeduction(), 24000);
+        assertEquals(t.getTaxable(), 56500);
+        assertEquals(t.getTax(), 6380, 0.01);
+        assertEquals(t.getDue(), 5620);
+    }
+
+    @Test
+    public void test_042() {
+        IncomeTaxForm t = new IncomeTaxForm();
+        t.setWages(20000);
+        t.setInterest(23);
+        t.setUnemployment(500);
+        t.setStatus(1);
+        t.setWithheld(400);
+        assertEquals(t.getAGI(), 20523);
+        assertEquals(t.getDeduction(), 12000);
+        assertEquals(t.getTaxable(), 8523);
+        assertEquals(t.getTax(), 852, 0.01);
+        assertEquals(t.getDue(), 452);
+    }
+
+    @Test
+    public void test_043() {
+        IncomeTaxForm t = new IncomeTaxForm();
+        t.setWages(70000);
+        t.setInterest(14);
+        t.setUnemployment(400);
+        t.setStatus(2);
+        t.setWithheld(350);
+        assertEquals(t.getAGI(), 70414);
+        assertEquals(t.getDeduction(), 24000);
+        assertEquals(t.getTaxable(), 46414);
+        assertEquals(t.getTax(), 5169.68, 0.01);
+        assertEquals(t.getDue(), 4819);
+    }
+
 }
