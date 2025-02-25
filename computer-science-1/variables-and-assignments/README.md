@@ -121,3 +121,18 @@ kind of like PEMDAS
 3. Describe the difference between next() and nextLine() in the Scanner class
 
    next() reads until next whitespace, nextLine() reads all characters on that one line.
+
+# HW-008
+## 2.16 - Integer Overflow
+1. Describe integer overflow
+
+   when value assigned is greater than the max value an integer can have
+## 2.17 - Numeric Data Types
+1. Enumerate the different types of numeric data types and their supported ranges
+
+   a byte holds 8 bits, a short 16 bits, an integer 32 bits and a long 64 bits, a float can have up to 32 bites and a double 64 bits
+## 2.18 - Random Numbers
+1. Demonstrate generation of a random number (you do not need to include this in your homework)
+2. Describe a pseudo random number and how that is different from a random number
+
+   based on things like the time beacus it is different every time the program is run
