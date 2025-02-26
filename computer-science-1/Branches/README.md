@@ -38,7 +38,7 @@ else {
 ## 3.4 Detecting Ranges with Branches
 1. Describe and give example Java code to detect a range (using logical operators and gaps)
 
-# 3.11 Switch Statements
+## 3.11 Switch Statements
 1. Describe the purpose of a switch statement
 
    represent multi-branch behavior more clearly involves variable being compared to constant values
@@ -60,25 +60,25 @@ else {
        break;
    }
    ```
-# 3.12 Boolean Data Type
+## 3.12 Boolean Data Type
 1. Demonstrate (give an example) of a Java declaration of a Boolean variable and assignment and a Boolean literal and an expression
 ```
 boolean isPink;
 
 isPink = true;
 ```
-# 3.13 String Comparisons
+## 3.13 String Comparisons
 1. Demonstrate (give an example) of the correct way to do String comparisons in Java
 
    str2.equals(str3); not ==
-# 3.14 String Access Operations
+## 3.14 String Access Operations
 1. Demonstrate Java code for accessing a character (including the last character) in a String
   ```
    newWord = "Colorado";
    System.out.print(newWord.charAt(5));
   ```
 returns a
-# 3.15 Character Operations
+## 3.15 Character Operations
 1. Demonstrate Java code to determine if a character is a letter, digit or whitespace.
 
 isDigit()
@@ -127,3 +127,30 @@ else {
   - logical OR ||
 2. Describe and give example Java code for a complex logical expression
   
+# HW-012
+
+## 3.16 Finding and Replacing Text in a String
+1. Demonstrate Java code to find a substring in a string (starting anywhere in the string)
+```
+dogName = "george";
+dogName.substring(1, 4);
+```
+outputs eor
+2. Demonstrate Java code to return a substring from a string
+
+3. Demonstrate Java code to replace text in a string
+```
+stateName = "Colorado";
+stateName.replace("Colorado", "CO");
+```
+outputs CO
+## 3.17 Conditional Expressions
+1. Demonstrate Java code to use conditional expressions
+
+condition ? WhenTrue : WhenFalse, used to shorthand if-else statements
+## 3.18 Floating Point Comparison
+1. Demonstrate (give an example) of the correct way to do floating point comparisons in Java and explain why this is needed
+
+Math.abs(x - y) < 0.0001
+## 3.19 Short Circuit Evaluation
+1. Explain short circuit evaluation
