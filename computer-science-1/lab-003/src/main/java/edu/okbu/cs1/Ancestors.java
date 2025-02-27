@@ -12,10 +12,15 @@ public class Ancestors {
     }
 
     public void printInformation() {
-        while (consYear > userYear) {
+        while (consYear >= userYear) {
             System.out.println("Ancestors in " + consYear + ": " + numAnc);
             numAnc = 2 * numAnc;
-            consYear = consYear - 
+            consYear = consYear - 20;
         }
+    }
+
+    public static void main(String[] args) {
+        Ancestors a = new Ancestors(1600, 2020, 2);
+        a.printInformation();
     }
 }
