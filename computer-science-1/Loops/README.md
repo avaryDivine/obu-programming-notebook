@@ -35,5 +35,20 @@
   never altering the value in the body
 6. Demonstrate Java implementation of a while loop with a sentinel value (provide example code)
 
+# HW-014
 
+## 4.4 For Loops
+1. Demonstrate Java implementation of a for loop (provide example code)
+```
+int a;
+for (a = 0; a < 8; a = a + 1) {
+System.out.println(a);
+}
+```
+2. Compare and contrast for and while loops
+
+3. Demonstrate Java implementation of a for loop to find the maximum value in a list (provide example code)
+
+## 4.6 Loops and Strings
+1. Demonstrate Java implementation of a loop to process each character in a string to count, find, etc. (provide example code)
 
