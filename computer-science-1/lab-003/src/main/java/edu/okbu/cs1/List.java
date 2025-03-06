@@ -26,21 +26,30 @@ public class List {
 
         double average = sum / numValues;
         System.out.print(average);
-        inList.close();
-        fileScanner.close();
         return average;
         
     }
 
-    public double findMin() {
+    public double findMin() throws IOException {
+        int min;
+        int value;
+        min = 600;
         while (fileScanner.hasNext()) {
-            if 
+            value = fileScanner.nextInt();
+            if (value < min) {
+                min = value;
+            }
         }
+        System.out.println(min);
+        inList.close();
+        fileScanner.close();
+        return min;
     }
     
     public static void main(String[] args) throws IOException {
         List l = new List();
         l.computeAverage();
+        l.findMin();
     }
 }
 
