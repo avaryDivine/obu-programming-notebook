@@ -63,3 +63,49 @@ immediate exit of a loop
 2. Describe the purpose of a continue statement
 
 immediate continuation to the loop condition check
+
+# HW-014
+
+## 4.4 For Loops
+1. Demonstrate Java implementation of a for loop (provide example code)
+```
+int a;
+for (a = 0; a < 8; a = a + 1) {
+System.out.println(a);
+}
+```
+2. Compare and contrast for and while loops
+
+for loop iterates a more specific amount of time and ensures that the value is changed and will eventually break the loop
+3. Demonstrate Java implementation of a for loop to find the maximum value in a list (provide example code)
+```
+numValues = scnr.nextInt();
+
+for (i = 0; i < numValues; ++i) {
+  value = scnr.nextInt();
+
+  if (i == 0) { 
+    max = value;
+  }
+  else if (value > max) {
+    max = value;
+  }
+}
+
+if (numValues > 0) {
+  System.out.println("Max: " + max);
+      }
+```
+## 4.6 Loops and Strings
+1. Demonstrate Java implementation of a loop to process each character in a string to count, find, etc. (provide example code)
+```
+word = scnr.next();
+
+numLetters = 0;
+  for (i = 0; i < word.length(); ++i) {
+    if (Character.isLetter(word.charAt(i))) {
+      numLetters += 1;
+    }
+}
+System.out.println("Num of letters: " + numLetters);
+```
