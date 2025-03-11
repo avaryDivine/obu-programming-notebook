@@ -110,20 +110,4 @@ numLetters = 0;
 System.out.println("Num of letters: " + numLetters);
 ```
 
-## 4.10 Variable Name Scope
-1. Describe Java scope
 
-region of code where a variable is valid
-2. Describe a block
-
-brace enclosed sequence of statements
-3. Describe a variable name's scope
-
-## 4.11 Enumerations
-1. Describe the purpose and use of an enumeration
-
- declares a name for a type and values for that type ex. red, yellow, green for stop light
-2. Demonstrate Java implementation of an enumeration (give code examples)
-```
-public enum Fruit {APPLE, GRAPE, ORANGE};
-```
