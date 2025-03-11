@@ -10,8 +10,8 @@ public class List {
     FileInputStream inList;
 
     public List() throws FileNotFoundException {
-        fileScanner = new Scanner(inList);
         inList = new FileInputStream("myList.txt");
+        fileScanner = new Scanner(inList);
     }
 
     public double computeAverage() throws IOException {
@@ -24,32 +24,39 @@ public class List {
             sum = sum + fileScanner.nextInt();
         }
 
+        fileScanner.close();
+        inList.close();
+
         double average = sum / numValues;
-        System.out.print(average);
+        System.out.println("Average: " + average);
         return average;
         
     }
 
     public double findMin() throws IOException {
-        int min;
-        int value;
-        min = 600;
+        inList = new FileInputStream("myList.txt");
+        fileScanner = new Scanner(inList);
+        int min = fileScanner.nextInt();
+
         while (fileScanner.hasNext()) {
-            value = fileScanner.nextInt();
+            int value = fileScanner.nextInt();
             if (value < min) {
                 min = value;
             }
         }
-        System.out.println(min);
-        inList.close();
+
+        System.out.println("Min: " + min);
         fileScanner.close();
+        inList.close();
         return min;
     }
+    
     
     public static void main(String[] args) throws IOException {
         List l = new List();
         l.computeAverage();
         l.findMin();
+        
     }
 }
 
