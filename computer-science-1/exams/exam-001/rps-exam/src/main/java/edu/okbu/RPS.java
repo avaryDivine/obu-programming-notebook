@@ -13,48 +13,140 @@ public class RPS {
     Player player1;
     Player player2;
     int numGames;
+    Choices player1Choice;
+    Choices player2Choice;
 
     public RPS() {
         
     }
 
     public void initialize(String fileName) throws IOException {
-        // Open the file given by the parameter fileName
         rpsFile = new FileInputStream(fileName);
         fileScanner = new Scanner(rpsFile);
 
-        // The first line in the file is the name of the first player
         String player1Name = fileScanner.nextLine();
-
-        // The second line in the file is the name of the second player
         String player2Name = fileScanner.nextLine();
-
-        // The third line in the file is the number of games to play
         numGames = fileScanner.nextInt();
 
-        // Read in these values
+        player1 = new Player(player1Name);
+        player2 = new Player(player2Name);
         
-        // Create an instance of the Player class with the name from the 
-        // first line in the file and initialize the player1 instance variable
-        //player1 = Player(player1Name);
-        // Create an instance of the Player class with the name from the 
-        // second line in the file and initialize the player2 instance variable
-        //player2 = Player(player2Name);
-        // Initialize the numGames instance variable from the third line in the
-        // file.
-
-        // Open a file / PrintWriter and assign to the outWriter instance variable.
-        // This will be used to storing game play information.
         outFile = new FileOutputStream("rps.out");
         outValue = new PrintWriter(outFile);
-        outValue.print(player1Name + " " + player2Name + " " + numGames);
+
+    }
+
+    public void setPlayer1(Player player) {
+        player1 = player;
+    }
+
+    public void setPlayer2(Player player) {
+        player2 = player;
+    }
+
+    public void play() throws IOException {
+        player1.resetWins();
+        player2.resetWins();
+
+        for (int i = 1; i <= numGames; ++i) {
+            outValue.println("Game number " + i + ":");
+            outValue.println();
+            System.out.println("Game number " + i + ":");
+            System.out.println();
+
+            player1Choice = player1.getChoice();
+            player2Choice = player2.getChoice();
+            
+            outValue.println("Player1 chose " + player1Choice);
+            System.out.println("Player1 chose " + player1Choice);
+            outValue.println("Player2 chose " + player2Choice);
+            System.out.println("Player2 chose " + player2Choice);
+
+            determineWinner();
+        }
+
+        outValue.println(player1.toString());
+        System.out.println(player1.toString());
+        outValue.println();
+        System.out.println();
+
+        outValue.println(player2.toString());
+        System.out.println(player2.toString());
+        outValue.println();
+        System.out.println();
 
         fileScanner.close();
         rpsFile.close();
+
+        outValue.flush();
         outValue.close();
+        outFile.close();
     }
 
-    public void play() {
+    public Player determineWinner() {
+        Player winner;
+        winner = null;
 
+        if ((player1Choice == Choices.ROCK) && (player2Choice == Choices.PAPER)) {
+            player2.addWin();
+            winner = player2;
+
+            outValue.println("Player2 won!");
+            System.out.println("Player2 won!");
+            outValue.println();
+            System.out.println();
+        }
+        else if ((player1Choice == Choices.ROCK) && (player2Choice == Choices.SCISSORS)) {
+            player1.addWin();
+            winner = player1;
+
+            outValue.println("Player1 won!");
+            System.out.println("Player1 won!");
+            outValue.println();
+            System.out.println();
+        }
+        else if ((player1Choice == Choices.PAPER) && (player2Choice == Choices.ROCK)) {
+            player1.addWin();
+            winner = player1;
+
+            outValue.println("Player1 won!");
+            System.out.println("Player1 won!");
+            outValue.println();
+            System.out.println();
+        }
+        else if ((player1Choice == Choices.PAPER) && (player2Choice == Choices.SCISSORS)) {
+            player2.addWin();
+            winner = player2;
+
+            outValue.println("Player2 won!");
+            System.out.println("Player2 won!");
+            outValue.println();
+            System.out.println();
+        }
+        else if ((player1Choice == Choices.SCISSORS) && (player2Choice == Choices.ROCK)) {
+            player2.addWin();
+            winner = player2;
+
+            outValue.println("Player2 won!");
+            System.out.println("Player2 won!");
+            outValue.println();
+            System.out.println();
+        }
+        else if ((player1Choice == Choices.SCISSORS) && (player2Choice == Choices.PAPER)) {
+            player1.addWin();
+            winner = player1;
+
+            outValue.println("Player1 won!");
+            System.out.println("Player1 won!");
+            outValue.println();
+            System.out.println();
+        }
+        else if (player1Choice == player2Choice) {
+            outValue.println("Its a tie!");
+            System.out.println("Its a tie!");
+            outValue.println();
+            System.out.println();
+        }
+        return winner;
     }
 }
