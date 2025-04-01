@@ -32,7 +32,7 @@ public class theGame {
     }
 
     public String summary() throws IOException {
-        summaryString = "After " + numGames + "games :\n";
+        summaryString = "After " + numGames + " games :\n";
         summaryString += "Player 1 won __ times\n"; 
         //TODO: add numWins
         summaryString += "Player 2 won __ times\n";
