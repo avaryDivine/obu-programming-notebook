@@ -37,7 +37,7 @@ public class ArrayPractice {
     public void reverse() {
        
 
-        for (int i = 0; i < theNumbers.length / 2; i++) {
+        for (int i = 0; i < theNumbers.length / 2; ++i ) {
             int j = theNumbers.length - 1 - i;
          
         
@@ -46,9 +46,9 @@ public class ArrayPractice {
             theNumbers[j] = temp;
         }
 
-      System.out.println("Reversed array:");
-      for (int i = 0; i < theNumbers.length; ++i) {
-         System.out.println(theNumbers[i]);
+        System.out.println("Reversed array:");
+        for (int i = 0; i < theNumbers.length; ++i) {
+            System.out.println(theNumbers[i]);
         }
    }
 
