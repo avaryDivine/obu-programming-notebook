@@ -35,17 +35,24 @@ public class ArrayPractice {
     }
 
     public void reverse() {
-        for (int i = 0; i < (theNumbers.length/2); i++) {
-            for (int j = (theNumbers.length - 1); j > (theNumbers.length/2); j--) {
-                int temp = theNumbers[i]; 
-                theNumbers[i] = theNumbers[j];
-                theNumbers[j] = temp;
-                System.out.println(theNumbers[i]);
-                
-            }
+       
+
+        for (int i = 0; i < theNumbers.length / 2; i++) {
+            int j = theNumbers.length - 1 - i;
+         
+        
+            int temp = theNumbers[i];
+            theNumbers[i] = theNumbers[j];
+            theNumbers[j] = temp;
         }
 
-    }
+      System.out.println("Reversed array:");
+      for (int i = 0; i < theNumbers.length; ++i) {
+         System.out.println(theNumbers[i]);
+        }
+   }
+
+    
 
     public static void main(String[] args) throws FileNotFoundException {
         ArrayPractice array = new ArrayPractice();
