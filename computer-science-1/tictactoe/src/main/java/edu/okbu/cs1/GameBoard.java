@@ -30,6 +30,30 @@ public class GameBoard {
         System.out.print(toString());
     }
 
+    public String winner() {
+        for (int i = 0; i < board.length; ++i) {
+            for (int j = 0; j < board[i].length - 2; ++j) {
+                if ((board[i][j] != null) && board[i][j].equals(board[i][j+1]) && board[i][j].equals(board[i][j+2])) {
+                    return board[i][j];
+                }
+            }
+        }
+        for (int i = 0; i < board.length - 2; ++i) {
+            for (int j = 0; j < board[i].length; ++j) {
+                if ((board[i][j] != null) && board[i][j].equals(board[i+1][j]) && board[i][j].equals(board[i+2][j])) {
+                    return board[i][j];
+                }
+            }
+        }
+        if ((board[0][0] != null) && board[0][0].equals(board[1][1]) && board[0][0].equals(board[2][2])) {
+            return board[0][0];
+        }
+        if ((board[0][2] != null) && board[0][2].equals(board[1][1]) && board[0][2].equals(board[2][0])) {
+            return board[0][2];
+        }
+        return null;
+    }
+
     public static void main(String[] args) {
         GameBoard playboard = new GameBoard();
         playboard.display();
