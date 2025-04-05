@@ -8,3 +8,6 @@ Goals
 - [ ] write player choice() method
 - [ ] write gameBoard play() method
 - [ ] write gameBoard validMove() method
+- [ ] write player class
+- [ ] write gameBoard play() method
+- [ ] write gameBoard validMove() method
