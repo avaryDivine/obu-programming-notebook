@@ -1,4 +1,24 @@
+# HW-020
+## 6.7 Using a loop to modify a copy of an array
+1. Implement a Java algorithm to modify an array (show example code)
+```
+for (i = 0; i < array.length; ++i) {
+         if ((array[i] % 2) == 0) {
+            array[i] = 0;
+         }
+      }
+```
+2. Implement a Java algorithm to copy an array (show example code)
+```
+for (i = 0; i < array.length; ++i) {
+         copied[i] = array[i];
+      }
+```
+## 6.8 Debugging example
+1. Describe some common errors in reversing an array's elements
 
+- array-index-out-of-bounds exception occurred
+- failed to actually swap the array elements, instead the code just copies values in one direction
 # HW-019
 ## 6.4 Iterating through arrays
 1. Demonstrate (show code example) the use of a loop to iterate over elements of an array
