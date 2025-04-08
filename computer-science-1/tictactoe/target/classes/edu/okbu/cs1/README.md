@@ -4,10 +4,12 @@ Goals
 - [X] write gameBoard toString() method
 - [X] write gameBoard display() method
 - [X] write gameBoard winner() method
-- [ ] check winner method
-- [ ] write player choice() method
+- [X] check winner method
+- [X] write player choice() method
 - [ ] write gameBoard play() method
-- [ ] write gameBoard validMove() method
-- [ ] write player class
-- [ ] write gameBoard play() method
-- [ ] write gameBoard validMove() method
+- [X] write gameBoard validMove() method
+- [ ] implement winner counting
+- [X] fix out file problems
+- [X] fix what looks like in terminal
+
+
