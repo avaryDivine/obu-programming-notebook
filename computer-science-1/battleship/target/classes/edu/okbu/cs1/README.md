@@ -1,0 +1,8 @@
+- [ ] outline of each class
+- [ ] initialize() method in hidden game board
+- [ ] display() method
+- [ ] toString() method
+- [ ] player make a choice
+- [ ] valid move method
+- [ ] play() method in hidden game board
+- [ ] 
