@@ -33,6 +33,7 @@ public class theGame {
     public void initialize() throws FileNotFoundException {
         outFile = new FileOutputStream("tictactoe.out");
         outWriter = new PrintWriter(outFile);
+        
         inFile = new FileInputStream("numGames.txt");
         fileScanner = new Scanner(inFile);
     }
@@ -65,7 +66,6 @@ public class theGame {
                 player1choiceChar = player1.xo();
                 playBoard.board[player1choice[0]][player1choice[1]] = player1choiceChar;
                 outWriter.println("Player1 chose " + player1choiceChar + " at " + player1choice[0] + player1choice[1]);
-                //System.out.println("Player1 chose " + player1choiceChar + " at " + player1choice[0] + player1choice[1]);
                 
                 winner = playBoard.winner();
                 if (winner != null) {
@@ -77,7 +77,6 @@ public class theGame {
                 player2choiceChar = player2.xo();
                 playBoard.board[player2choice[0]][player2choice[1]] = player2choiceChar;
                 outWriter.println("Player2 chose " + player2choiceChar + " at " + player2choice[0] + player2choice[1]);
-                //System.out.println("Player2 chose " + player2choiceChar + " at " + player2choice[0] + player2choice[1]);
 
                 playBoard.display();
                 System.out.println();
@@ -105,8 +104,8 @@ public class theGame {
 
     public String summary() throws IOException {
         summaryString = "After " + numGames + " games:\n";
-        summaryString += "Player 1 won " + player1.getWins() + " times\n"; 
-        summaryString += "Player 2 won " + player2.getWins() + " times\n";
+        summaryString += "Player 1 won: " + player1.getWins() + " times\n"; 
+        summaryString += "Player 2 won: " + player2.getWins() + " times\n";
         System.out.println(summaryString);
         outWriter.println(summaryString);
         outWriter.close();
