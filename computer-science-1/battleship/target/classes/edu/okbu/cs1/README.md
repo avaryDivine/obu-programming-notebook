@@ -1,8 +1,10 @@
-- [ ] outline of each class
-- [ ] initialize() method in hidden game board
-- [ ] display() method
-- [ ] toString() method
+- [X] outline of each class
+- [X] initialize() method in hidden game board
+- [X] display() method
+- [X] toString() method
 - [ ] player make a choice
 - [ ] valid move method
 - [ ] play() method in hidden game board
-- [ ] 
+- [ ] play() method in battleship
+- [ ] winner() method in game board
+- [ ] summary() method in battleship
