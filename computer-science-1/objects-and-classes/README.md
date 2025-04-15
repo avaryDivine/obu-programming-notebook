@@ -1,5 +1,26 @@
 [Objects and Classes](computer-science-i/README.md)
 
+# HW-023
+## 8.7 Defining main() in a programmer define class
+1. Describe the purpose of the main() method and the steps to implement one
+
+static method, independent of class objects, can access other static methods or static fields, can not access non-static methods
+## 8.8 Unit Testing (classes)
+1. Describe the purpose of unit testing
+
+create and run a test for a specific method or unit
+2. Describe the purpose of a test case
+
+input/output checks
+3. Describe border cases
+
+unusual or extreme cases
+4. Describe regression testing
+
+retest item like class anytime the item is changed
+## 8.9 Constructor Overloading
+1. Describe constructor overloading and why it might be used
+
 ## 7.1
 1. Define an object:
    
