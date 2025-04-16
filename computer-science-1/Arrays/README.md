@@ -1,3 +1,30 @@
+# HW-021
+## 6.9 Two dimensional arrays
+1. Describe how to declare a two-dimensional array in Java (show example code)
+```
+int [][] myArray = new int[3][3];
+```
+2. Describe how to initialize a two-dimensional array in Java (show example code)
+```
+myArray[0][0] = 3;
+myArray[0][1] = 5;
+```
+3. Describe how to iterate over a two-dimensional array in Java (show example code)
+```
+for(int i = 0; i < myArray.length; ++i) {
+         for(int j = 0; j < myArray[i].length; ++j) {
+
+         }
+}
+```
+## 6.10 Enhanced for loop
+1. Demonstrate the Java enhanced for loop (show example code)
+```
+for (int x : myArray) {
+   System.out.println(x);
+}
+```
+
 # HW-020
 ## 6.7 Using a loop to modify a copy of an array
 1. Implement a Java algorithm to modify an array (show example code)
@@ -19,6 +46,7 @@ for (i = 0; i < array.length; ++i) {
 
 - array-index-out-of-bounds exception occurred
 - failed to actually swap the array elements, instead the code just copies values in one direction
+
 # HW-019
 ## 6.4 Iterating through arrays
 1. Demonstrate (show code example) the use of a loop to iterate over elements of an array
