@@ -12,6 +12,24 @@ public class player {
         this.game = game;
     }
 
+    public int[] choice() {
+        System.out.println("Type the row number of your choice: ");
+        choice[0] = scnr.nextInt();
+
+        System.out.println("Type the column number of your choice: ");
+        choice[1] = scnr.nextInt();
+
+        while (!game.validMove(choice)) {
+            System.out.println("That place on the board is already filled. Type the row number of your new choice: ");
+            choice[0] = scnr.nextInt();
+
+            System.out.println("Type the column number of your new choice: ");
+            choice[1] = scnr.nextInt();
+        }
+
+        return choice;
+    }
+
     public int getWins() {
         return numWins;
     }

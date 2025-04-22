@@ -8,10 +8,11 @@ public class gameBoard {
     FileInputStream inFile;
     Scanner fileScanner;
     String boardString;
-    String[][] mainBoard = new String[5][5];
-    String[][] hiddenBoard = new String[5][5];
+    String[][] mainBoard;
+    String[][] hiddenBoard;
     int i;
     int j;
+    String playString = "";
 
     public gameBoard() {
 
@@ -20,6 +21,11 @@ public class gameBoard {
     public void initialize() throws FileNotFoundException {
         inFile = new FileInputStream("shipPos.txt");
         fileScanner = new Scanner(inFile);
+        
+        int boardLength = fileScanner.nextInt();
+        int boardWidth = fileScanner.nextInt();
+
+        hiddenBoard = new String[boardLength][boardWidth];
 
         for (i = 0; i < hiddenBoard.length; ++i) {
             for (j = 0; j < hiddenBoard[i].length; ++j) {
@@ -32,6 +38,12 @@ public class gameBoard {
                         hiddenBoard[i][j] = inString;
                     }
                 }
+            }
+        }
+
+        for (i = 0; i < mainBoard.length; ++i) {
+            for (j = 0; j < mainBoard[i].length; ++j) {
+                mainBoard[i][j] = null;
             }
         }
 
@@ -56,6 +68,31 @@ public class gameBoard {
 
     public void display() {
         System.out.print(toString());
+    }
+
+    public Boolean validMove(int[] move) {
+        int row = move[0];
+        int column = move[1];
+        
+        if (mainBoard[row][column] == null) {
+            return true;
+        }
+
+        return false;
+    }
+
+    public String play(int[] move) {
+        int row = move[0];
+        int column = move[1];
+
+        if (hiddenBoard[row][column].equals("_")) {
+            playString = "Miss";
+        }
+        else {
+            playString = "Hit";
+        }
+        
+        return playString;
     }
 
     public static void main(String[] args) throws FileNotFoundException {
