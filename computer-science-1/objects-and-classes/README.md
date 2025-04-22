@@ -1,5 +1,39 @@
 [Objects and Classes](computer-science-i/README.md)
 
+# HW-024
+## 8.10 Objects and references
+1. Define a (object) reference
+
+variable type that refers to an object, 
+2. Describe the purpose and use of the new operator
+
+allocates memory for an object, then returns a reference to the object's location in memory
+## 8.11 The "this" implicit parameter
+1. Define the implicit parameter
+
+object reference before method, 
+2. Define 'this' in the context of Java objects
+
+mplicitly-passed object reference is accessible via the keyword this
+## 8.12 Primitive and reference types
+1. Define a primitive type
+
+stores data for that variable type, 
+2. Define a reference type
+
+refer to instance of class
+3. Define a wrapper class
+
+built-in reference types that augment the primitive types
+4. Define immutable
+
+a programmer cannot change the object via methods or variable assignments after object creation
+5. List the allowable relational operators for wrapper classes
+## 8.13 Wrapper class conventions
+1. Define, compare and contrast autoboxing and unboxing
+
+Autoboxing is the automatic conversion of primitive types to the corresponding wrapper classes. Unboxing is the automatic conversion of wrapper class objects to the corresponding primitive types.
+
 # HW-022
 ## 8.4 Mutators, accessors, and private helpers
 1. Describe a mutator
