@@ -34,6 +34,27 @@ a programmer cannot change the object via methods or variable assignments after 
 
 Autoboxing is the automatic conversion of primitive types to the corresponding wrapper classes. Unboxing is the automatic conversion of wrapper class objects to the corresponding primitive types.
 
+# HW-023
+## 8.7 Defining main() in a programmer define class
+1. Describe the purpose of the main() method and the steps to implement one
+
+static method, independent of class objects, can access other static methods or static fields, can not access non-static methods
+## 8.8 Unit Testing (classes)
+1. Describe the purpose of unit testing
+
+create and run a test for a specific method or unit
+2. Describe the purpose of a test case
+
+input/output checks
+3. Describe border cases
+
+unusual or extreme cases
+4. Describe regression testing
+
+retest item like class anytime the item is changed
+## 8.9 Constructor Overloading
+1. Describe constructor overloading and why it might be used
+
 # HW-022
 ## 8.4 Mutators, accessors, and private helpers
 1. Describe a mutator
