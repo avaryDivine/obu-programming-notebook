@@ -21,6 +21,26 @@ retest item like class anytime the item is changed
 ## 8.9 Constructor Overloading
 1. Describe constructor overloading and why it might be used
 
+# HW-022
+## 8.4 Mutators, accessors, and private helpers
+1. Describe a mutator
+
+a method that may modify a classes field
+2. Describe an accessor
+
+method that accesses fields but may not modify them
+3. Describe a setter / getter
+
+setter is a mutator, getter is an accessor
+4. Describe a private helper method
+
+only called from classes other methods, cant be called by other classes
+
+## 8.5 Initializations and constructors
+1. Describe the purpose and use of a constructor
+
+   used to initialize all fields, no return type
+   
 ## 7.1
 1. Define an object:
    
