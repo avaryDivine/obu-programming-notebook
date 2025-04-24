@@ -1,7 +1,7 @@
 - [X] outline of each class
 - [X] initialize() method in hidden game board
 - [X] display() method
-- [X] toString() method
+- [ ] toString() method
 - [X] player make a choice
 - [X] valid move method
 - [X] play() method in hidden game board
