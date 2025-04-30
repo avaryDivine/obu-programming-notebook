@@ -15,21 +15,52 @@ public class aiPlayer {
     }
 
     public int[] choice() {
-        if (game.board[1][1] == null) {
-            choice[0] = 1;
-            choice[1] = 1;
-        }
-        else {
-            for (int i = 0; i < 3; i++) {
-                for (int j = 0; j < 3; j++) {
-                    choice[0] = i;
-                    choice[1] = j;
-                    if (game.validMove(choice)) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (game.board[i][j] == null) {
+                    game.board[i][j] = "O";
+                    if ("O".equals(game.winner())) {
+                        game.board[i][j] = null;
+                        choice[0] = i;
+                        choice[1] = j;
                         return choice;
                     }
+                    game.board[i][j] = null;
                 }
             }
         }
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (game.board[i][j] == null) {
+                    game.board[i][j] = "X";
+                    if ("X".equals(game.winner())) {
+                        game.board[i][j] = null;
+                        choice[0] = i;
+                        choice[1] = j;
+                        return choice;
+                    }
+                    game.board[i][j] = null;
+                }
+            }
+        }
+
+        if (game.board[1][1] == null) {
+            choice[0] = 1;
+            choice[1] = 1;
+            return choice;
+        }
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                choice[0] = i;
+                choice[1] = j;
+                if (game.validMove(choice)) {
+                    return choice;
+                }
+            }
+        }
+
         return choice;
     }
 
