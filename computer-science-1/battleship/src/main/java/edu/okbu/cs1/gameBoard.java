@@ -17,6 +17,8 @@ public class gameBoard {
     int i;
     int j;
     String playString = "";
+    String ship = "";
+    
 
     public gameBoard() throws FileNotFoundException {
         initialize();
@@ -56,6 +58,7 @@ public class gameBoard {
         }
 
     }
+
     
 
     public String hiddenDisplay() {
@@ -117,7 +120,7 @@ public class gameBoard {
             mainBoard[row][column] = "M";
         }
         else {
-            String ship = hiddenBoard[row][column];
+            ship = hiddenBoard[row][column];
             playString = "Hit!";
             mainBoard[row][column] = "H";
 
@@ -137,6 +140,7 @@ public class gameBoard {
         
         return playString;
     }
+
 
     public boolean shipSunk(String ship) {
         for (int i = 0; i < hiddenBoard.length; i++) {

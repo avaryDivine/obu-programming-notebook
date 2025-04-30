@@ -20,6 +20,7 @@ public class Battleship {
     PrintWriter outWriter;
     Boolean winner;
     String summaryString;
+    String playString = "";
 
     public Battleship() throws FileNotFoundException {
         mainBoard = new gameBoard();
@@ -52,10 +53,22 @@ public class Battleship {
                 outWriter.println("Shot number " + i + ":");
                 System.out.println("Shot number " + i + ":");
 
-                thePlayerChoice = thePlayer.choice();
+                thePlayerChoice = thePlayer.choice(playString);
                 outWriter.println("You chose " + thePlayerChoice[0] + thePlayerChoice[1]);
-                System.out.println(mainBoard.play(thePlayerChoice));
-                outWriter.println(mainBoard.play(thePlayerChoice));
+                String result = mainBoard.play(thePlayerChoice);
+                System.out.println(result);
+                outWriter.println(result);
+                if (result.equals("Hit!")) {
+                    playString = "H";
+                    
+                }
+                else if (mainBoard.shipSunk(mainBoard.ship)) {
+                    playString = "S";
+                }
+                else if (result.equals("Miss!")) {
+                    playString = "M";
+                }
+
                 System.out.println();
                 outWriter.println();
 
