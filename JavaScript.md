@@ -29,3 +29,5 @@ console.log(x + z); // converts x to a string and performs string concatination
 let a = parseInt("45"); //parses to a number
 console.log(a + x);
 
+
+
