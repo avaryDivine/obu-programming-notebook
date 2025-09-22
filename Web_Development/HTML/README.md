@@ -5,3 +5,6 @@
 <meta> data that describes the document's data. <meta charset="UTF-8"> describes how characters are represented in the HTML document.   Additional <meta> elements may be used to indicate when the document was saved, who the author is, etc.
 <title> element specifies the document's name. The title is usually displayed in the browser's titlebar, is used by search engines, and is used for bookmarking.
 <body> what user will see
+
+- all formatting has to be done with elements
+- sections used to group content, no effect on web page, just groups related content
