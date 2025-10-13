@@ -1,0 +1,54 @@
+{
+    "the-weekend" : {
+        "bison-day" : [
+            {
+                "name" : "Fun on the oval",
+                "date" : "2025-10-24",
+                "location" : "The oval"
+            },
+            {
+                "name" : "Musical gala",
+                "date" : "2025-10-24",
+                "location" : "RAWC"
+            },
+            {
+                "name" : "Bison pep rally",
+                "date" : "2025-10-24",
+                "location" : "Noble"
+            }
+        ],
+        "family-weekend" : [
+            {
+                "name" : "Ice cream social",
+                "date" : "2025-10-24",
+                "location" : "Lower level GC"
+            },
+            {
+                "name" : "Family weekend worship and fellowship",
+                "date" : "2025-10-25",
+                "location" : "Upper GC 219-220"
+            }
+        ]
+    },
+    "stem-day" : {
+        "science" : [
+            {
+                "name" : "Nursing",
+                "date" : "2025-11-15",
+                "location" : "Stavros sim lab"
+            },
+            {
+                "name" : "Rocketry",
+                "date" : "2025-11-15",
+                "location" : "The oval"
+            }
+        ],
+        "technology" : [
+            {
+                "name" : "Computer Science",
+                "date" : "2025-11-15",
+                "location" : "Stavros computer lab"
+            }
+        ]
+    }
+}
