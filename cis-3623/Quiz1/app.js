@@ -1,6 +1,6 @@
 import express from "express"
 import bodyParser from "body-parser"
-import {getSmallEvent } from "./api.js"
+import {returnSmallEvent, addEvent } from "./api.js"
 
 const app = express(); // ALWAYS
 
@@ -14,12 +14,34 @@ app.post("/return-SmallEvent", function(req, res) {
     let elementIdx = req.body.elementIdx;
     console.log("/return-SmallEvent section: " + section + ", event: " + event + ", elementIdx: " + elementIdx);
 
-    let the_event = getSmallEvent(section, event, elementIdx);
+    let the_event = returnSmallEvent(section, event, elementIdx);
 
     res.json(the_event);
 })
 
 
+app.post("/add-event", function(req, res) {
+    let event_category = req.body.event_category;
+    let event_name = req.body.event_name;
+    let sub_event_name = req.body.sub_event_name;
+    let date = req.body.date;
+    let location = req.body.location;
+
+    let addedEvent = {
+        status: "OK",
+        the_new_sub_event : {
+            event_category: event_category,
+            event_name: event_name,
+            sub_event_name: sub_event_name,
+            date: date,
+            location: location
+        }
+    }
+
+    addEvent(event_category, event_name, sub_event_name, date, location);
+    res.json(addedEvent);
+
+})
 
 // Start a server
 app.listen(3000, function() {

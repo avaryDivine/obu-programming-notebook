@@ -16,4 +16,27 @@ async function return_SmallEvent(theSection, theEvent, theElementIdx) {
     let the_data = await response.json();
     console.log(the_data); 
 }
-get_SmallEvent("the-weekend", "bison-day", 0);
+return_SmallEvent("the-weekend", "bison-day", 0);
+
+async function add_event(category, eventName, the_name, the_date, the_location) {
+    let response = await fetch("http://localhost:3000/add-event", {
+        method: "POST",
+        headers: {
+            'Accept' : 'application/json',
+            'Content-Type' : 'application/json'
+        },
+        body: JSON.stringify({
+            event_category : category,
+            event_name : eventName,
+            sub_event_name : the_name,
+            date : the_date,
+            location : the_location
+
+        })
+    });
+    let the_data = await response.json();
+    console.log(the_data); 
+}
+add_event("the-weekend", "bison-day", "Comp Sci", "10-15-25", "Bailey");
+return_SmallEvent("the-weekend", "bison-day", 3);
+

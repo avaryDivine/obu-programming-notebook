@@ -71,11 +71,8 @@ let anEvent = getBigEvent("the-weekend");
 console.log(anEvent);
 
 function returnSubEvent(section, event) {
-    let return_events = {
-        status: "OK",
-        events: events[section][event]
-    }
-    return return_events;
+    let theEvents = events[section][event]
+    return theEvents;
 }
 
 let Bison = returnSubEvent("the-weekend", "family-weekend");
@@ -97,7 +94,7 @@ console.log(BisonEvent);
 
 function addSmallEvent(section, event, jsonBook) {
     let BigEvent = returnSubEvent(section, event);
-    BigEvent.events.push(jsonBook);
+    BigEvent.push(jsonBook);
 }
 
 addSmallEvent("the-weekend", "family-weekend",
@@ -128,3 +125,14 @@ function deleteElement(section, event, eventIdx) {
 //deleteElement("stem-day", "science", 0);
 //let Event = returnSubEvent("stem-day", "science");
 //console.log(Event)
+
+export function addEvent(event_category, event_name, sub_event_name, date, location) {
+    addSmallEvent(event_category, event_name, {"name": sub_event_name, "date": date, "location":location})
+
+    let newEvent = events[event_category][event_name];
+    let printEvent = newEvent[newEvent.length - 1];
+    return printEvent;
+}
+
+//let displayEvent = addEvent("the-weekend", "bison-day", "tours", "10-15-25", "WMU");
+//console.log(displayEvent);
