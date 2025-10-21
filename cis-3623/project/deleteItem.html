@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Avary's Closet - Delete Item</h1>
+
+    <p>ID number:&nbsp;<input type="ID" id="input-id" ></text></p>
+    <input type="button" value="Find Item">
+
+    <br>
+    <br>
+    <p>Type:</p>
+    <input type="radio" name="type" value="shirt" id="shirt">
+    <label for="shirt">Shirt</label>
+    <br>
+    <input type="radio" name="type" value="pant" id="pant">
+    <label for="pant">Pants</label>
+    <br>
+    <input type="radio" name="type" value="dress" id="dress">
+    <label for="dress">Dress</label>
+    <br>
+
+    <p>Size:</p>
+    <input type="radio" name="size" value="small" id="small">
+    <label for="small">Small</label>
+    <br>
+    <input type="radio" name="size" value="medium" id="medium">
+    <label for="medium">Medium</label>
+    <br>
+    <input type="radio" name="size" value="large" id="large">
+    <label for="large">Large</label>
+
+    <p>Color:&nbsp;<input type="color" id="input-color" ></text></p>
+    <p>Brand:&nbsp;<input type="brand"  id="input-brand" ></text></p>
+
+
+
+    <input type="button" value="Delete Item">
+    <br>
+
+    <a href="homePage.html">
+        <input type="button" value="Back Home">
+    </a>
+    <script>
+        //"Get" each control
+        let titleText = document.getElementById("title-input-id");
+        console.log("Value = " + titleText.value);
+        console.log("Id = " + titleText.id);
+
+    </script>
+</body>
+</html>
