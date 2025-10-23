@@ -33,9 +33,7 @@ public class player {
     }
 
     public String xo() {
-        System.out.println("Type x or o: ");
-        choiceChar = scnr.next();
-        System.out.println();
+        choiceChar = "X";
         return choiceChar;
     }
 

@@ -13,11 +13,11 @@ public class theGame {
     FileOutputStream outFile;
     PrintWriter outWriter;
     player player1;
-    player player2;
+    aiPlayer aiPlayer;
     int[] player1choice;
     String player1choiceChar;
-    int [] player2choice;
-    String player2choiceChar;
+    int [] aiPlayerchoice;
+    String aiPlayerchoiceChar;
     GameBoard playBoard;
     String winner;
     Scanner fileScanner;
@@ -27,7 +27,7 @@ public class theGame {
     public theGame() {
         playBoard = new GameBoard();
         player1 = new player(playBoard);
-        player2 = new player(playBoard);
+        aiPlayer = new aiPlayer(playBoard);
     }
 
     public void initialize() throws FileNotFoundException {
@@ -42,8 +42,8 @@ public class theGame {
         player1 = player;
     }
 
-    public void setPlayer2(player player) {
-        player2 = player;
+    public void setaiPlayer(aiPlayer Player) {
+        aiPlayer = Player;
     }
 
 
@@ -72,11 +72,11 @@ public class theGame {
                     break;
                 }
 
-                System.out.println("Player 2: ");
-                player2choice = player2.choice();
-                player2choiceChar = player2.xo();
-                playBoard.board[player2choice[0]][player2choice[1]] = player2choiceChar;
-                outWriter.println("Player2 chose " + player2choiceChar + " at " + player2choice[0] + player2choice[1]);
+                System.out.println("The computer: ");
+                aiPlayerchoice = aiPlayer.choice();
+                aiPlayerchoiceChar = aiPlayer.xo();
+                playBoard.board[aiPlayerchoice[0]][aiPlayerchoice[1]] = aiPlayerchoiceChar;
+                outWriter.println("The computer chose " + aiPlayerchoiceChar + " at " + aiPlayerchoice[0] + aiPlayerchoice[1]);
 
                 playBoard.display();
                 System.out.println();
@@ -90,11 +90,11 @@ public class theGame {
                 System.out.println("Winner of game " + i + ": Player1");
                 System.out.println();
             }
-            else if (player2choiceChar.equals(winner)) {
-                player2.addWin();
-                outWriter.println("Winner of game " + i + ": Player2");
+            else if (aiPlayerchoiceChar.equals(winner)) {
+                aiPlayer.addWin();
+                outWriter.println("Winner of game " + i + ": The computer");
                 outWriter.println();
-                System.out.println("Winner of game " + i + ": Player2");
+                System.out.println("Winner of game " + i + ": The computer");
                 System.out.println();
             }
             playBoard.resetBoard();
@@ -105,7 +105,7 @@ public class theGame {
     public String summary() throws IOException {
         summaryString = "After " + numGames + " games:\n";
         summaryString += "Player 1 won: " + player1.getWins() + " times\n"; 
-        summaryString += "Player 2 won: " + player2.getWins() + " times\n";
+        summaryString += "The computer won: " + aiPlayer.getWins() + " times\n";
         System.out.println(summaryString);
         outWriter.println(summaryString);
         outWriter.close();

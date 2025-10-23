@@ -1,23 +1,16 @@
 Game number 1:
 
-Player1 chose x at 00
-Player2 chose o at 22
-Player1 chose x at 02
-Player2 chose o at 20
-Player1 chose x at 01
-Winner of game 1: Player1
+Player1 chose X at 11
+The computer chose O at 00
+Player1 chose X at 01
+The computer chose O at 21
+Player1 chose X at 02
+The computer chose O at 20
+Player1 chose X at 12
+The computer chose O at 10
+Winner of game 1: The computer
 
-Game number 2:
-
-Player1 chose x at 21
-Player2 chose o at 11
-Player1 chose x at 20
-Player2 chose o at 12
-Player1 chose x at 00
-Player2 chose o at 10
-Winner of game 2: Player2
-
-After 2 games:
-Player 1 won: 1 times
-Player 2 won: 1 times
+After 1 games:
+Player 1 won: 0 times
+The computer won: 1 times
 

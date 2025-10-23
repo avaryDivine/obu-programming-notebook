@@ -1,0 +1,5 @@
+June:
+Average amount of rain: 1.25 inches 
+Minimum amount of rain: 0.0 inches 
+Maximum amount of rain: 5.6 inches 
+
