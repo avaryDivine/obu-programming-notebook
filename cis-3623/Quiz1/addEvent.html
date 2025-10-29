@@ -8,7 +8,7 @@
 <body>
     <h1>Add Event</h1>
 
-    <select name="Event Category">
+    <select name="Event Category" id="category">
         <option value="The Weekend">The Weekend</option>
         <option value="STEM Day">STEM Day</option>
     </select>
@@ -37,5 +37,29 @@
     <a href="OBUevents.html">
         <input type="button" value="Back to Events">
     </a>
+
+
+    <script>
+        let section = document.getElementById("category");
+        section.addEventListener("change", function(event) {
+            console.log("Event category was changed to " + this.value);
+        });
+
+        let eventName = document.getElementById("input-sub-name");
+        eventName.addEventListener("change", function(event){
+            console.log("Event name was changed to " + this.value);
+        });
+
+        let eventDate = document.getElementById("input-date");
+        eventDate.addEventListener("change", function(event){
+            console.log("Event date was changed to " + this.value);
+        });
+
+        let eventLocation = document.getElementById("input-location");
+        eventLocation.addEventListener("change", function(event){
+            console.log("Event location was changed value to " + this.value);
+        });
+
+    </script>
 </body>
 </html>
