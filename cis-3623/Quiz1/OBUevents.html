@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBU Events</title>
+</head>
+<body>
+    <h1>Events on Bison Hill</h1>
+    <p>Oklahoma Baptist University values building community
+        among students and the community at large. Listed below
+        are some of the events that occur on Bison Hill 
+        during the fall semester.
+    </p>
+
+    <section>
+        <h2>The Weekend:</h2>
+        <p>The Weekend is a long standing event established to
+            welcome back alumni and families of current students. During the weekend students, their 
+            families and alumnus gather together on Bison Hill and share in making memories.
+        </p>
+        <a href="theWeekend.html">
+            <input type="button" value="Learn more about The Weekend" id="the-weekend">
+        </a>
+    </section>
+    
+    <section>
+        <h2>Stem Day:</h2>
+        <p>Stem Day welcomes high school and middle school students to learn more about
+            diverse STEM topics and gives them exposure to life on Bison Hill.
+        </p>
+        <a href="STEMday.html">
+            <input type="button" value="Learn more about STEM Day" id="stem-day">
+        </a>
+    </section>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <section>
+        <p>Click here to add an event to the itinerary:</p>
+        <a href="addEvent.html">
+            <input type="button" value="Add Event">
+        </a>
+    </section>
+
+    <script>
+        let weekend = document.getElementById("the-weekend");
+        weekend.addEventListener("click", function(event) {
+            console.log("clicked " + this.id);
+        });
+
+    </script>
+    
+    
+</body>
+</html>
