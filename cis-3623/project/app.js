@@ -1,16 +1,23 @@
-const express =  require("express") //ALWAYS NEED
-const bodyParser = require("body-parser");
-const app = express() // ALWAYS NEED
+import express from "express"
+import bodyParser from "body-parser"
+import {returnItem} from "./api.js"
+
+const app = express(); // ALWAYS
 
 app.use(express.json());
 app.use(bodyParser.json());
 
-let MyCloset = {
-    D_01 : {type: "Dress", size: "Medium", color: "White", brand: "Old Navy", description: "Short with poofy sleeves"},
-    S_01 : {type: "T-Shirt", size: "Large", color: "Gray", brand: "National Parks", description: "Graphic of Smokey the Bear"},
-    P_01 : {type: "Pants", size: "8", color: "Light wash", brand: "Universal Thread", description: "Rip in one knee, flower pockets"}
+app.post("/return-Item", function(req,res) {
+    console.log("/return-Item");
+    let type = req.body.type;
+    let ID = req.body.ID;
 
-};
+    let the_item = returnItem(type, ID);
+    res.json(the_item);
+})
+
+
+
 
 app.post("/create-clothingItem", function(req, res) {
     console.log("New Clothing Item: " + req.body.Item_ID);
