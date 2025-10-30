@@ -8,8 +8,28 @@
 <body>
     <h1>Delete Event</h1>
 
-    <p>Name of Event to Delete:&nbsp;<input type="text" id="input-sub-name" ></text></p>
+    <select name="Event Category" id="category">
+        <option value="The Weekend">The Weekend</option>
+        <option value="STEM Day">STEM Day</option>
+    </select>
+
+    <p>For The Weekend:</p>
+    <input type="radio" name="name" value="bison-day" id="bisonDay">
+    <label for="bisonDay">Bison Day</label>
+    <br>
+    <input type="radio" name="name" value="family-weekend" id="familyWeekend">
+    <label for="familyWeekend">Family Weekend</label>
+    <p>For STEM Day:</p>
+    <input type="radio" name="name" value="science" id="science">
+    <label for="science">Science</label>
+    <br>
+    <input type="radio" name="name" value="technology" id="technology">
+    <label for="technology">Technology</label>
+    <br>
+
+    <p>Name of Event to be Deleted:&nbsp;<input type="text" id="input-sub-name" ></text></p>
     <input type="button" value="Delete Event">
+    <br>
     <br>
     <br>
     <a href="OBUevents.html">
