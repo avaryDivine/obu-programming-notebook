@@ -7,19 +7,21 @@
     <title>Add Itemt</title>
 </head>
 <body>
-    <h1>Avary's Closet - Add Item</h1>
+    <h1>Avary's Closet</h1>
+
+    <h2>Add an Item</h2>
 
 
     <p>ID number:&nbsp;<input type="text" id="input-id" ></text></p>
 
     <p>Type:</p>
-    <input type="radio" name="type" value="shirt" id="shirt">
+    <input type="radio" name="type" value="shirts" id="shirt">
     <label for="shirt">Shirt</label>
     <br>
-    <input type="radio" name="type" value="pant" id="pant">
+    <input type="radio" name="type" value="pants" id="pant">
     <label for="pant">Pants</label>
     <br>
-    <input type="radio" name="type" value="dress" id="dress">
+    <input type="radio" name="type" value="dresses" id="dress">
     <label for="dress">Dress</label>
     <br>
 
@@ -35,18 +37,53 @@
 
     <p>Color:&nbsp;<input type="color" id="input-color" ></text></p>
     <p>Brand:&nbsp;<input type="text" id="input-brand" ></text></p>
-    <input type="button" value="Add Item">
+    <p>Description:&nbsp;<input type="text" id="input-description"></text></p>
+    <input type="button" id="add_item_btn" value="Add Item">
+    <div id="add_id"></div>
     <br>
     <br>
     <a href="homePage.html">
         <input type="button" value="Back Home">
     </a>
-    <script>
-        //"Get" each control
-        let titleText = document.getElementById("title-input-id");
-        console.log("Value = " + titleText.value);
-        console.log("Id = " + titleText.id);
 
-    </script>
+
+    <script src="index.js"></script>
+
+    <style>
+        body {
+            background-color: #f4f1ea;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: #a8bfa1;
+            padding: 20px;
+            margin: 2px;
+
+            
+        }
+
+        h2 {
+            background-color:#e4b7a0;
+            padding: 10px;
+            margin: 2px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+
+        input[type="button"] {
+            background-color:#e4b7a0;
+        }
+
+        input[type="button"]:hover {
+            background-color:#a8bfa1;
+        }
+
+
+    </style>
 </body>
 </html>

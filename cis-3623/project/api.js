@@ -11,43 +11,51 @@ let MyCloset = {
     }
 
 };
-console.log(MyCloset);
+//console.log(MyCloset);
 
-function returnCloset() {
+export function returnCloset() {
     let return_closet = {
         status: "OK",
         closet: MyCloset
     }
     return return_closet;
 }
-//console.log(MyCloset["pants"]);
+//let closet = returnCloset();
+//console.log(closet);
 
-function returnCategory(type) {
+export function returnCategory(type) {
     let theType = MyCloset[type];
     return theType;
 }
-let category = returnCategory("shirt");
-console.log(category);
+//let category = returnCategory("shirts");
+//console.log(category);
 
-export function returnItem(type, ID) {
+export function returnItem(type, item_ID) {
     let return_item = {
         status: "OK",
-        itme: MyCloset[type][ID]
+        item: MyCloset[type][item_ID]
     }
     return return_item;
 }
-//let the_return = returnItem("dress", 1);
+//console.log(MyCloset["pants"]["p_01"]);
+//let the_return = returnItem("dresses", "d_01");
 //console.log(the_return);
 
-function addItem(type, ID, size, color, brand, description) {
+export function addItem(type, item_ID, size, color, brand, description) {
+   
     let the_type = returnCategory(type);
-    the_type[ID] = {"size" : size, "color" : color, "brand" : brand, "description" : description};
-    let new_item = MyCloset[type][ID];
+    the_type[item_ID] = {"size" : size, "color" : color, "brand" : brand, "description" : description};
+    let new_item = MyCloset[type][item_ID];
     return new_item;
 }
 
-//let displayItem = addItem("dress", "D_02", "medium", "blue","Walmart", "tank top, long");
-//console.log(displayItem);
+export function deleteItem(type, item_ID) {
+    delete MyCloset[type][item_ID];
+}
+
+//deleteItem("shirts", "s_01");
+//let deletedCloset = returnCloset();
+//console.log(deletedCloset);
 
 
 
