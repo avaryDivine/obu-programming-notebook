@@ -51,6 +51,21 @@ export function addItem(type, item_ID, size, color, brand, description) {
 
 export function deleteItem(type, item_ID) {
     delete MyCloset[type][item_ID];
+    let return_status = {
+        status : "OK",
+        message : "Deleted"
+    }
+    return return_status;
+}
+
+export function updateItem(type, item_ID, size, color, brand, description) {
+    let the_type = returnCategory(type);
+    the_type[item_ID] = {"size" : size, "color" : color, "brand" : brand, "description" : description};
+    let return_status = {
+        status: "OK",
+        message : "Updated"
+    }
+    return return_status;
 }
 
 //deleteItem("shirts", "s_01");

@@ -7,7 +7,7 @@ async function call_add_item(new_item_type, new_item_ID, new_item_size, new_item
         },
         body : JSON.stringify({
             type: new_item_type,
-            Item_ID: new_item_ID,
+            item_ID: new_item_ID,
             size: new_item_size,
             color: new_item_color,
             brand: new_item_brand,
@@ -36,7 +36,7 @@ async function call_return_category(call_type) {
     let the_data = await response.json();
     console.log(the_data);
 };
-//call_return_category("dresses");
+call_return_category("shirts");
 
 
 async function call_read_clothing_items() {
@@ -54,15 +54,16 @@ async function call_read_clothing_items() {
     }
 };
 
-async function call_read_specific_item(ID) {
-    let response = await fetch("http://localhost:3000/read-specificItem", {
+async function call_return_item(the_type, ID) {
+    let response = await fetch("http://localhost:3000/return-item", {
         method : "POST",
         headers : {
             'Accept' : 'application/json',
             'Content-type' : 'application/json'
         },
         body : JSON.stringify({
-            specificID : ID
+            type : the_type,
+            item_ID : ID
         })
 
     });
@@ -71,7 +72,7 @@ async function call_read_specific_item(ID) {
     console.log(the_data);
 };
 
-//call_read_specific_item("S_01");
+//call_return_item("shirts","s_01");
 
 async function call_delete_item(delete_item_type, delete_item_ID) {
     let response = await fetch("http://localhost:3000/delete-item", {
@@ -82,7 +83,7 @@ async function call_delete_item(delete_item_type, delete_item_ID) {
         },
         body : JSON.stringify({
             type: delete_item_type,
-            Item_ID: delete_item_ID,
+            item_ID: delete_item_ID,
         })
 
     });
@@ -91,5 +92,29 @@ async function call_delete_item(delete_item_type, delete_item_ID) {
     console.log(the_data);
 };
 
-call_delete_item("shirts", "s_01");
+//call_delete_item("shirts", "s_01");
+
+async function call_update_item(new_item_type, new_item_ID, new_item_size, new_item_color, new_item_brand, new_item_description) {
+    let response = await fetch("http://localhost:3000/update-item", {
+        method : "POST",
+        headers : {
+            'Accept' : 'application/json',
+            'Content-type' : 'application/json'
+        },
+        body : JSON.stringify({
+            type: new_item_type,
+            item_ID: new_item_ID,
+            size: new_item_size,
+            color: new_item_color,
+            brand: new_item_brand,
+            description: new_item_description
+        })
+
+    });
+    
+    let the_data = await response.json();
+    console.log(the_data);
+};
+
+call_update_item("shirts", "s_01", "large", "black", "Old Navy", "long sleeve");
 call_return_category("shirts");
