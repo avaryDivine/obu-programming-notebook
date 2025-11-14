@@ -13,6 +13,8 @@
 
     <div class="form-block">
 
+        <p>ID number:&nbsp;<input type="text"  id="input-id" ></text></p>
+
         <p>Type:</p>
         <input type="radio" name="type" value="shirts" id="shirt">
         <label for="shirt">Shirt</label>
@@ -22,9 +24,9 @@
         <br>
         <input type="radio" name="type" value="dresses" id="dress">
         <label for="dress">Dress</label>
-        <br>
+        <br><br>
 
-        <p>ID number:&nbsp;<input type="text"  id="input-id" ></text></p>
+        
         <div id="find_item"></div>
         
         <input type="button" value="Find Item" id="find_item_btn">
@@ -40,8 +42,10 @@
 
         <p>Color:&nbsp;<input type="color" id="input-color" ></text></p>
         <p>Brand:&nbsp;<input type="text" id="input-brand" ></text></p>
+        <p>Description:&nbsp;<input type="text" id="input-description" ></text></p>
 
-        <input type="button" value="Update Item">
+        <input type="button" value="Update Item" id="update_item_btn">
+        <div id="update_result"></div>
         <br>
         <br>
         <a href="homePage.html">

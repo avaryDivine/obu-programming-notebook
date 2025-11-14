@@ -22,13 +22,13 @@
         let brand = document.getElementById("input-brand");
         let description = document.getElementById("input-description");
 
-        let new_item_ID = id_input_text.value;
+        let new_item_id = id_input_text.value;
         let new_item_color = color.value;
         let new_item_brand = brand.value;
         let new_item_description = description.value;
         console.log("Adding new item with characteristics:", {
             type: new_item_type,
-            id: new_item_ID,
+            id: new_item_id,
             size: new_item_size,
             color: new_item_color,
             brand: new_item_brand,
@@ -42,7 +42,7 @@
             },
             body : JSON.stringify({
                 type: new_item_type,
-                Item_ID: new_item_ID,
+                item_id: new_item_id,
                 size: new_item_size,
                 color: new_item_color,
                 brand: new_item_brand,
@@ -51,10 +51,12 @@
         });
         let the_data = await response.json();
         console.log(the_data);
-        console.log("Success");
+        
 
         let the_div_placeholder = document.getElementById("add_id");
         let the_response = document.createElement("p");
         the_response.innerHTML = "<b>Item was Added!</b>";
         the_div_placeholder.appendChild(the_response);
     });
+
+    
