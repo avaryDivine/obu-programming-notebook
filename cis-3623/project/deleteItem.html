@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Item</title>
+</head>
+<body>
+    <h1>Avary's Closet</h1>
+
+    <h2>Delete an Item</h2>
+
+    <div class="form-block">
+
+        <p>Type:</p>
+        <input type="radio" name="type" value="shirts" id="shirt">
+        <label for="shirt">Shirt</label>
+        <br>
+        <input type="radio" name="type" value="pants" id="pant">
+        <label for="pant">Pants</label>
+        <br>
+        <input type="radio" name="type" value="dresses" id="dress">
+        <label for="dress">Dress</label>
+        <br>
+
+        <p>ID number:&nbsp;<input type="text" id="input-id" ></text></p>
+        <input type="button" value="Find Item" id="find_item_btn">
+        <br><br>
+        <div id="find_id"></div>
+
+
+        <input type="button" value="Delete Item" id="delete_item_btn">
+        <br>
+        <div id="delete_id"></div>
+        <br>
+        <br>
+
+        <a href="homePage.html">
+            <input type="button" value="Back Home">
+        </a>
+    </div>
+
+    <script src="deleteItem.js"></script>
+
+    <style>
+        body {
+            background-color: #f4f1ea;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            text-align: center;
+            
+        }
+
+        h1 {
+            background-color: #a8bfa1;
+            padding: 20px;
+            margin: 0;
+
+            
+        }
+
+        h2 {
+            background-color:#e4b7a0;
+            padding: 10px;
+            margin: 0;
+        }
+
+
+        .form-block {
+            max-width: 600px;
+            width: 90%;
+            margin: 40px auto;
+            text-align: left;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+
+        input[type="button"] {
+            background-color:#e4b7a0;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+
+        input[type="button"]:hover {
+            background-color:#c47e5a;
+        }
+
+        input[type="radio"] {
+            accent-color: #a8bfa1;
+        }
+
+
+    </style>
+</body>
+</html>
