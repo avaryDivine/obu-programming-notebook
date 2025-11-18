@@ -1,4 +1,4 @@
-async function call_add_item(new_item_type, new_item_ID, new_item_size, new_item_color, new_item_brand, new_item_description) {
+async function call_add_item(new_item_type, new_item_id, new_item_size, new_item_color, new_item_brand, new_item_description) {
     let response = await fetch("http://localhost:3000/add-item", {
         method : "POST",
         headers : {
@@ -7,7 +7,7 @@ async function call_add_item(new_item_type, new_item_ID, new_item_size, new_item
         },
         body : JSON.stringify({
             type: new_item_type,
-            item_ID: new_item_ID,
+            item_id: new_item_id,
             size: new_item_size,
             color: new_item_color,
             brand: new_item_brand,
@@ -36,25 +36,24 @@ async function call_return_category(call_type) {
     let the_data = await response.json();
     console.log(the_data);
 };
-call_return_category("shirts");
+//call_return_category("shirts");
 
 
-async function call_read_clothing_items() {
-    let response = await fetch("http://localhost:3000/read-clothingItems", {
-        method : "GET",
+async function call_return_closet() {
+    let response = await fetch("http://localhost:3000/return-closet", {
+        method : "POST",
         headers : {
             'Accept' : 'application/json',
             'Content-type' : 'application/json'
         }
     });
     let the_data = await response.json();
-    let the_closet = the_data.the_closet;
-    for (let key in the_closet) {
-        console.log("Item : " + the_closet[key])
-    }
+    let the_closet = the_data.closet;
+    console.log(the_closet);
 };
+//call_return_closet();
 
-async function call_return_item(the_type, ID) {
+async function call_return_item(the_type, id) {
     let response = await fetch("http://localhost:3000/return-item", {
         method : "POST",
         headers : {
@@ -63,7 +62,7 @@ async function call_return_item(the_type, ID) {
         },
         body : JSON.stringify({
             type : the_type,
-            item_ID : ID
+            item_id : id
         })
 
     });
@@ -74,7 +73,7 @@ async function call_return_item(the_type, ID) {
 
 //call_return_item("shirts","s_01");
 
-async function call_delete_item(delete_item_type, delete_item_ID) {
+async function call_delete_item(delete_item_type, delete_item_id) {
     let response = await fetch("http://localhost:3000/delete-item", {
         method : "POST",
         headers : {
@@ -83,7 +82,7 @@ async function call_delete_item(delete_item_type, delete_item_ID) {
         },
         body : JSON.stringify({
             type: delete_item_type,
-            item_ID: delete_item_ID,
+            item_id: delete_item_id,
         })
 
     });
@@ -94,7 +93,7 @@ async function call_delete_item(delete_item_type, delete_item_ID) {
 
 //call_delete_item("shirts", "s_01");
 
-async function call_update_item(new_item_type, new_item_ID, new_item_size, new_item_color, new_item_brand, new_item_description) {
+async function call_update_item(new_item_type, new_item_id, new_item_size, new_item_color, new_item_brand, new_item_description) {
     let response = await fetch("http://localhost:3000/update-item", {
         method : "POST",
         headers : {
@@ -103,7 +102,7 @@ async function call_update_item(new_item_type, new_item_ID, new_item_size, new_i
         },
         body : JSON.stringify({
             type: new_item_type,
-            item_ID: new_item_ID,
+            item_id: new_item_id,
             size: new_item_size,
             color: new_item_color,
             brand: new_item_brand,
@@ -116,5 +115,5 @@ async function call_update_item(new_item_type, new_item_ID, new_item_size, new_i
     console.log(the_data);
 };
 
-call_update_item("shirts", "s_01", "large", "black", "Old Navy", "long sleeve");
-call_return_category("shirts");
+//call_update_item("shirts", "s_01", "large", "black", "Old Navy", "long sleeve");
+//call_return_category("shirts");

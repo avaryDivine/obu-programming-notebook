@@ -13,6 +13,7 @@ let find_item_button = document.getElementById("find_item_btn");
         console.log("Finding item with:", {
             id: id_input_text.value,
         });
+
        let response = await fetch("http://localhost:3000/return-item", {
             method: "POST",
             headers: {
@@ -21,23 +22,29 @@ let find_item_button = document.getElementById("find_item_btn");
             },
             body : JSON.stringify({
                 type : return_item_type,
-                item_ID : id_input_text.value
+                item_id : id_input_text.value
             })
         });
         let the_data = await response.json();
         console.log(the_data);
-        console.log("Success");
 
         let the_div_placeholder = document.getElementById("find_id");
         let the_response = document.createElement("p");
-        let item = the_data.item;
-        the_response.innerHTML = `
-            <h3>Item Found:</h3>
-            <b>Size:</b> ${item.size}<br>
-            <b>Color:</b> ${item.color}<br>
-            <b>Brand:</b> ${item.brand}<br>
-            <b>Description:</b> ${item.description}`
-        the_div_placeholder.appendChild(the_response);
+        if (the_data.status === "ERROR") {
+            let item = the_data.item;
+            the_response.innerHTML = "<b>" + item + "</b>";
+            the_div_placeholder.appendChild(the_response);
+        }
+        else {
+            let item = the_data.item;
+            the_response.innerHTML = 
+            "<h3>Item Found:</h3>" +
+            "<b>Size: </b>" + item.size + "<br>" +
+            "<b>Color: </b>" + item.color + "<br>" +
+            "<b>Brand: </b>" + item.brand + "<br>" +
+            "<b>Description: </b>" + item.description;
+            the_div_placeholder.appendChild(the_response);
+        }
     });
 
 
@@ -64,18 +71,17 @@ let find_item_button = document.getElementById("find_item_btn");
             },
             body : JSON.stringify({
                 type: delete_item_type,
-                Item_ID: id_input_text.value,
+                item_id: id_input_text.value,
             })
 
         });
         let the_data = await response.json();
         console.log(the_data);
-        console.log("Success");
 
         let the_div_placeholder = document.getElementById("delete_id");
         let the_response = document.createElement("p");
-        let item = the_data.item;
-        the_response.innerHTML = "<b>Item was Deleted!</b>";
+        let item = the_data.message;
+        the_response.innerHTML = "<b>" + item + "</b>";
         the_div_placeholder.appendChild(the_response);
     });
 
