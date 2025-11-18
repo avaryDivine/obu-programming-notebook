@@ -53,7 +53,7 @@ let events = {
     }
 }
 
-console.log(events);
+//console.log(events);
 
 // section = "stem-day" or "the-weekend"
 // event = "bison day", "family-weekend" or "science", "technology"
@@ -67,16 +67,16 @@ function getBigEvent(section) {
     return return_events;
 }
 
-let anEvent = getBigEvent("the-weekend");
-console.log(anEvent);
+//let anEvent = getBigEvent("the-weekend");
+//console.log(anEvent);
 
-function returnSubEvent(section, event) {
+export function returnSubEvent(section, event) {
     let theEvents = events[section][event]
     return theEvents;
 }
 
-let Bison = returnSubEvent("the-weekend", "family-weekend");
-console.log(Bison);
+//let Bison = returnSubEvent("the-weekend", "family-weekend");
+//console.log(Bison);
 
 
 
@@ -88,8 +88,8 @@ export function returnSmallEvent(section, event, elementIdx) {
     return return_events;
 }
 
-let BisonEvent = returnSmallEvent("stem-day", "science", 0);
-console.log(BisonEvent);
+//let BisonEvent = returnSmallEvent("stem-day", "science", 0);
+//console.log(BisonEvent);
 
 
 function addSmallEvent(section, event, jsonBook) {
@@ -105,17 +105,17 @@ addSmallEvent("the-weekend", "family-weekend",
     }
 )
 
-let bisonEvent = returnSubEvent("the-weekend", "family-weekend");
-console.log(bisonEvent);
+//let bisonEvent = returnSubEvent("the-weekend", "family-weekend");
+//console.log(bisonEvent);
 
 
 function updateElement(section, event, eventIdx, element, updatedValue){
     events[section][event][eventIdx][element] = updatedValue;
 }
 
-updateElement("stem-day", "science", 0, "date", "10-15-25");
-let smallEvent = returnSmallEvent("stem-day", "science", 0);
-console.log(smallEvent);
+//updateElement("stem-day", "science", 0, "date", "10-15-25");
+//let smallEvent = returnSmallEvent("stem-day", "science", 0);
+//console.log(smallEvent);
 
 function deleteElement(section, event, eventIdx) {
     let theSmallEvent = events[section][event];
@@ -133,6 +133,18 @@ export function addEvent(event_category, event_name, sub_event_name, date, locat
     let printEvent = newEvent[newEvent.length - 1];
     return printEvent;
 }
-
 //let displayEvent = addEvent("the-weekend", "bison-day", "tours", "10-15-25", "WMU");
 //console.log(displayEvent);
+
+export function deleteEvent(event_category, event_name, sub_event_name) {
+    for (let i = 0; i < events[event_category][event_name].length; i++) {
+        if (events[event_category][event_name][i].name === sub_event_name) {
+            events[event_category][event_name].splice(i, 1);
+            break;
+        }
+    }
+}
+
+//deleteEvent("stem-day", "science", "Nursing");
+//let the_delete = returnSubEvent("stem-day", "science");
+//console.log(the_delete);

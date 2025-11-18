@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event</title>
+</head>
+<body>
+    <h1>Add Event</h1>
+
+    <select name="Event Category" id="category">
+        <option value="The Weekend">The Weekend</option>
+        <option value="STEM Day">STEM Day</option>
+    </select>
+
+    <p>For The Weekend:</p>
+    <input type="radio" name="name" value="bison-day" id="bisonDay">
+    <label for="bisonDay">Bison Day</label>
+    <br>
+    <input type="radio" name="name" value="family-weekend" id="familyWeekend">
+    <label for="familyWeekend">Family Weekend</label>
+    <p>For STEM Day:</p>
+    <input type="radio" name="name" value="science" id="science">
+    <label for="science">Science</label>
+    <br>
+    <input type="radio" name="name" value="technology" id="technology">
+    <label for="technology">Technology</label>
+    <br>
+
+    <p>Name of New Event:&nbsp;<input type="text" id="input-sub-name" ></text></p>
+    <p>Date of New Event:&nbsp;<input type="date" id="input-date" ></text></p>
+    <p>Location of New Event:&nbsp;<input type="text" id="input-location" ></text></p>
+    <br>
+    <input type="button" value="Add Event">
+    <br>
+    <br>
+    <a href="OBUevents.html">
+        <input type="button" value="Back to Events">
+    </a>
+
+
+    <script>
+        let section = document.getElementById("category");
+        section.addEventListener("change", function(event) {
+            console.log("Event category was changed to " + this.value);
+        });
+
+        let eventName = document.getElementById("input-sub-name");
+        eventName.addEventListener("change", function(event){
+            console.log("Event name was changed to " + this.value);
+        });
+
+        let eventDate = document.getElementById("input-date");
+        eventDate.addEventListener("change", function(event){
+            console.log("Event date was changed to " + this.value);
+        });
+
+        let eventLocation = document.getElementById("input-location");
+        eventLocation.addEventListener("change", function(event){
+            console.log("Event location was changed value to " + this.value);
+        });
+
+    </script>
+</body>
+</html>
