@@ -103,11 +103,11 @@ let find_item_button = document.getElementById("find_item_btn");
         });
         let the_data = await response.json();
         console.log(the_data);
-      
+
 
         let the_div_placeholder = document.getElementById("update_result");
         let the_response = document.createElement("p");
-        let item = the_data.item;
+        let item = the_data.message;
         the_response.innerHTML = "<b>" + item + "</b>"
         the_div_placeholder.appendChild(the_response);
     });
