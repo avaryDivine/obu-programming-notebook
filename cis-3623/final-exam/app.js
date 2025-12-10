@@ -1,7 +1,7 @@
 import express from "express"
 import bodyParser from "body-parser"
 import cors from "cors";
-import {returnJob, returnLevelNum, returnHighestSalary} from "./api.js"
+import {returnJob, returnLevelNum, returnHighestSalary, returnAverageSalary, returnJobAverage} from "./api.js"
 
 const app = express(); // ALWAYS
 
@@ -32,6 +32,24 @@ app.post("/returnHighest-Salary", function(req,res) {
 
     let level = returnHighestSalary(job_type);
     res.json(level);
+})
+
+app.post("/returnAverage-Salary", function(req,res) {
+    console.log("/returnAverage-Salary");
+    let job_type = req.body.job_type;
+    let exp_level = req.body.exp_level;
+    let emp_type = req.body.emp_type;
+
+    let salary = returnAverageSalary(job_type, exp_level, emp_type);
+    res.json(salary);
+})
+
+app.post("/returnJob-Average", function(req,res) {
+    console.log("/returnJob-Average");
+    let job_type = req.body.job_type;
+
+    let salary = returnJobAverage(job_type);
+    res.json(salary);
 })
 
 

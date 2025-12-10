@@ -6,22 +6,99 @@
     <title>Jobs</title>
 </head>
 <body>
-    <h1>About Computer Science Jobs</h1>
+    <h1>Average Salaries</h1>
 
-    <h2>Highest possible salary for a specific job type:</h2>
+    <div class="form-block">
 
-    <label for="jobDropdown">Choose a job type:</label>
-    <select id="jobDropdown" name="jobDropdown">
-        <option value="AI Engineer">AI Engineer</option>
-        <option value="Data Engineer">Data Engineer</option>
-        <option value="Machine Learning Engineer">Machine Learning Engineer</option>
-        <option value="Data Analyst">Data Analyst</option>
-        <option value="Data Modeler">Data Modeler</option>
-        <option value="AI Software Engineer">AI Software Engineer</option>
-    </select>
-    <button id="find_salary">Find Salary</button>
-    <div id="salary_id"></div>
+        <p>Job Role:</p>
+        <select id="jobDropdown" name="jobDropdown">
+            <option value="AI Engineer">AI Engineer</option>
+            <option value="Data Engineer">Data Engineer</option>
+            <option value="Machine Learning Engineer">Machine Learning Engineer</option>
+            <option value="Data Analyst">Data Analyst</option>
+            <option value="Data Modeler">Data Modeler</option>
+            <option value="AI Software Engineer">AI Software Engineer</option>
+        </select>
+        <br><br>
+
+        <p>Experience Level:</p>
+        <input type="radio" name="expLevel" value="SE" id="SE">
+        <label for="SE">SE</label>
+        <br>
+        <input type="radio" name="expLevel" value="EN" id="EN">
+        <label for="EN">EN</label>
+        <br>
+        <input type="radio" name="expLevel" value="MI" id="MI">
+        <label for="MI">MI</label>
+        <br><br>
+
+        <p>Employment Type:</p>
+        <input type="radio" name="empType" value="FT" id="FT">
+        <label for="FT">Full Time</label>
+        <br>
+        <input type="radio" name="empType" value="PT" id="PT">
+        <label for="PT">Part Time</label>
+
+        <br><br><br>
+        <button id="find_salary">Find Salary</button>
+        <div id="salary_id"></div>
+        <br><br>
+    </div>
+
+    <table id="the_average">
+        <caption><b>Average Salary</b></caption>
+        <tr>
+            <th>Statistic</th>
+            <th>Value</th>
+        </tr>
+
+    </table>
+
+    <br><br><br>
 
     <script src="jobs.js"></script>
+
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            text-align: center;
+            
+        }
+
+        .form-block {
+            max-width: 600px;
+            width: 90%;
+            margin: 40px auto;
+            text-align: left;
+        }
+
+        table {
+            border-collapse: collapse;
+            width : 70%;
+            margin-left: auto;
+            margin-right: auto;
+    
+        }
+
+        caption {
+            border: 2px solid black;
+            padding: 5px; 
+            text-align: center;
+        }
+
+        th {
+            border: 2px solid black;
+            padding: 5px; 
+            text-align: center;
+        }
+
+        td {
+            border: 2px solid black;
+            padding: 5px; 
+            text-align: center;
+            
+        }
+    </style>
 </body>
 </html>
