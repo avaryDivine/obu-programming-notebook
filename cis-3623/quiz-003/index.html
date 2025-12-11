@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+    This client is to interact with the server defined in app.js via the endpoint function-001
+    Write HTML below to collect the information required by the server and display the results returned from the server
+    How you collect the data is up to you
+    How you display the information returned from the server is up to you
+    You do not need to do any styling
+    You should not need to modify the server
+    -->
+
+    <label>Enter Your Name: </label><input type="text" id="name" required/><br><br>
+    <label>Enter Your Age: </label><input type="number" id="age" required/><br><br>
+    <label>Enter Your Hometown: </label><input type="text" id="hometown" required/><br><br>
+
+    <input type="button" id="submit_btn" value="Submit Data">
+    <div id="result_id"></div>
+
+    <script>
+        let submit_info_btn = document.getElementById("submit_btn");
+        submit_info_btn.addEventListener("click", async function(event) {
+            console.log(event.target.id + " clicked ...");
+            let person_name = document.getElementById("name");
+            let person_age = document.getElementById("age");
+            let person_hometown = document.getElementById("hometown");
+            
+            let name_info = person_name.value;
+            let age_info = parseInt(person_age.value);
+            let hometown_info = person_hometown.value;
+
+            let response = await fetch("http://localhost:3000/function-001", {
+                method: "POST",
+                headers: {
+                    'Accept' : 'application/json',
+                    'Content-Type' : 'application/json'
+                },
+                body : JSON.stringify({
+                    name: name_info,
+                    age: age_info,
+                    hometown: hometown_info
+                })
+            });
+            let the_data = await response.json();
+            console.log(the_data);
+            let summary = the_data.the_description;
+            console.log("The description is: " + summary);
+
+            let the_div_placeholder = document.getElementById("result_id");
+            let the_result = document.createElement("p");
+            the_result.innerHTML = "<b>" + summary + "</b>";
+            the_div_placeholder.appendChild(the_result);
+        });
+    </script>
+</body>
+</html>
