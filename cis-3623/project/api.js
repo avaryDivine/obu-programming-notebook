@@ -4,7 +4,7 @@ let MyCloset = {
         "s_01" : {size: "Large", color: "#f85186", brand: "National Parks", description: "Graphic of Smokey the Bear"}
     },
      "pants" : {
-        "p_01" : {size: "8", color: "#b6aaba", brand: "Universal Thread", description: "Rip in one knee, flower pockets"}
+        "p_01" : {size: "Medium", color: "#b6aaba", brand: "Universal Thread", description: "Rip in one knee"}
     },
     "dresses": {
         "d_01" : {size: "Medium", color: "#aa0024", brand: "Old Navy", description: "Short with poofy sleeves"},
